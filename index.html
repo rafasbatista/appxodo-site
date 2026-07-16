@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xodó: O guia de bolso do seu pet 🐾</title>
+<meta name="description" content="Xodó: carteirinha de vacinação, lembretes e cuidados diários do seu cão ou gato. Simples, offline e cheio de carinho.">
+<style>
+  :root{
+    --primary:#33CDBA; --primaryDark:#1C9E8C; --primarySoft:#DCF6F1;
+    --accent:#FF7E67; --gold:#FFB300; --bg:#F6FAF9; --card:#FFFFFF;
+    --text:#1E2D2B; --textSoft:#5C6E6B; --border:#E4EDEB;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--primaryDark);text-decoration:none;font-weight:600;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px;}
+
+  /* hero */
+  .hero{
+    background:
+      radial-gradient(800px 600px at 82% 8%, rgba(255,255,255,.28), transparent 60%),
+      radial-gradient(700px 600px at 6% 100%, rgba(28,158,140,.5), transparent 55%),
+      linear-gradient(160deg,#43DBC9 0%, #2BB6A4 55%, #1C9E8C 100%);
+    color:#fff;text-align:center;padding:70px 22px 84px;position:relative;overflow:hidden;
+  }
+  .hero .paw{position:absolute;color:#fff;opacity:.10;font-size:120px;}
+  .hero .paw.a{top:30px;left:6%;transform:rotate(-18deg);}
+  .hero .paw.b{bottom:20px;right:8%;font-size:90px;transform:rotate(16deg);}
+  .logo{width:104px;height:104px;border-radius:26px;box-shadow:0 14px 36px rgba(9,60,54,.34);margin-bottom:22px;}
+  .hero h1{font-size:52px;font-weight:850;letter-spacing:-1px;text-shadow:0 3px 18px rgba(6,50,45,.25);}
+  .hero .slogan{margin-top:10px;font-size:22px;font-weight:600;opacity:.96;}
+  .hero p.desc{margin:20px auto 0;max-width:620px;font-size:17px;opacity:.94;}
+  .badges{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .store{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);
+    border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:14px;padding:12px 20px;font-weight:700;font-size:15px;}
+  .store small{display:block;font-size:11px;font-weight:500;opacity:.85;}
+
+  /* features */
+  section{padding:64px 0;}
+  h2.sec{text-align:center;font-size:32px;font-weight:800;margin-bottom:8px;}
+  .sub{text-align:center;color:var(--textSoft);font-size:16px;margin-bottom:40px;}
+  .feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+  .feat{background:var(--card);border-radius:20px;padding:26px 22px;box-shadow:0 8px 22px rgba(15,46,42,.07);}
+  .feat .ic{font-size:34px;}
+  .feat h3{font-size:18px;font-weight:800;margin:12px 0 6px;}
+  .feat p{font-size:14.5px;color:var(--textSoft);}
+
+  /* screenshots */
+  .shots-sec{background:linear-gradient(180deg,#EAF7F4,#F6FAF9);}
+  .shots{display:flex;gap:20px;overflow-x:auto;padding:8px 4px 20px;scroll-snap-type:x mandatory;}
+  .shots img{width:270px;flex:0 0 auto;border-radius:26px;box-shadow:0 16px 40px rgba(15,46,42,.16);scroll-snap-align:center;}
+
+  /* cta */
+  .cta{background:var(--card);border-radius:26px;padding:44px;text-align:center;box-shadow:0 10px 30px rgba(15,46,42,.08);}
+  .cta h2{font-size:26px;font-weight:800;}
+  .cta p{color:var(--textSoft);margin:8px 0 22px;}
+  .btn{display:inline-block;background:var(--primary);color:#fff;font-weight:800;border-radius:14px;padding:14px 28px;font-size:16px;box-shadow:0 8px 20px rgba(51,205,186,.4);}
+
+  /* footer */
+  footer{background:#0E2422;color:#B9CFCA;text-align:center;padding:40px 22px;font-size:14px;}
+  footer .flogo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px;}
+  footer .flogo img{width:40px;height:40px;border-radius:11px;}
+  footer .flogo b{color:#fff;font-size:20px;font-weight:800;}
+  footer a{color:#7FE6D6;}
+  footer .links{margin:8px 0 16px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+  footer .fine{opacity:.6;font-size:12.5px;margin-top:10px;}
+
+  @media(max-width:560px){
+    .hero h1{font-size:40px;} .hero .slogan{font-size:18px;}
+    h2.sec{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="paw a">🐾</div><div class="paw b">🐾</div>
+    <img class="logo" src="assets/favicon.png" alt="Xodó">
+    <h1>Xodó</h1>
+    <div class="slogan">O guia de bolso do seu pet 🐾</div>
+    <p class="desc">Carteirinha de vacinação, lembretes e cuidados diários do seu cão ou gato, tudo num app só, simples, offline e cheio de carinho.</p>
+    <div class="badges">
+      <span class="store">🍎 <span>App Store<small>Em breve</small></span></span>
+      <span class="store">▶️ <span>Google Play<small>Em breve</small></span></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2 class="sec">Tudo do seu pet, num lugar só</h2>
+      <p class="sub">Feito pra quem ama e cuida de perto.</p>
+      <div class="feats">
+        <div class="feat"><div class="ic">💉</div><h3>Carteirinha de vacinação</h3><p>Vacinas, vermífugos e antiparasitários com cálculo automático da próxima dose pelo calendário brasileiro. Verde = em dia, vermelho = atrasou.</p></div>
+        <div class="feat"><div class="ic">🔔</div><h3>Lembretes que não deixam esquecer</h3><p>Vacina, banho, remédio com horário, troca de ração, cio e aniversário, tudo com aviso no seu celular.</p></div>
+        <div class="feat"><div class="ic">✅</div><h3>Cuidados diários gamificados</h3><p>Um checklist que enche a barra até 100%, com streak 🔥 e frases motivacionais. Cuidar vira hábito.</p></div>
+        <div class="feat"><div class="ic">📅</div><h3>Agenda completa</h3><p>Vacinas, banhos, consultas e exames num calendário só, com cores por tipo.</p></div>
+        <div class="feat"><div class="ic">❤️</div><h3>Saúde num só lugar</h3><p>Consultas, exames com foto, medicamentos, histórico de peso e relatório de passeios.</p></div>
+        <div class="feat"><div class="ic">🗺️</div><h3>Perto de você</h3><p>Clínicas, pet shops e lugares pet friendly no mapa, com telefone, WhatsApp e rota.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shots-sec">
+    <div class="wrap">
+      <h2 class="sec">Dá uma espiada</h2>
+      <p class="sub">Arraste para o lado 👉</p>
+      <div class="shots">
+        <img src="assets/xodo-1-inicio.png" alt="Tela inicial com checklist">
+        <img src="assets/xodo-2-carteirinha.png" alt="Carteirinha de vacinação">
+        <img src="assets/xodo-3-agenda.png" alt="Agenda">
+        <img src="assets/xodo-4-saude.png" alt="Saúde">
+        <img src="assets/xodo-5-mapa.png" alt="Mapa de clínicas">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>Chegando em breve nas lojas 💚</h2>
+        <p>Enquanto isso, qualquer dúvida é só falar com a gente.</p>
+        <a class="btn" href="mailto:imprensa@rafasbatista.com.br">Falar com o Xodó</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="flogo"><img src="assets/favicon.png" alt=""><b>Xodó</b></div>
+    <div class="links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="mailto:imprensa@rafasbatista.com.br">Suporte</a>
+    </div>
+    <div>Desenvolvido por Rafael Batista</div>
+    <div class="fine">© 2026 Xodó · appxodo.rafasbatista.com.br · Feito com 💚 para tutores de cães e gatos</div>
+  </footer>
+</body>
+</html>
