@@ -68,28 +68,34 @@
 
       <h2>1. Resumo rápido</h2>
       <ul class="lead">
-        <li>🔒 <strong>Seus dados ficam no seu aparelho.</strong> O Xodó funciona <strong>offline</strong> e guarda tudo localmente. Não temos servidor que armazene os dados do seu pet.</li>
-        <li>🚫 <strong>Não vendemos seus dados</strong> e não os usamos para nada além de fazer o app funcionar.</li>
-        <li>🗑️ <strong>Você apaga tudo</strong> desinstalando o app ou limpando os dados nas configurações do celular.</li>
+        <li>🔒 <strong>Os dados do seu pet ficam no seu aparelho.</strong> O Xodó funciona <strong>offline</strong> e guarda a carteirinha, a saúde e as fotos localmente. Não temos servidor que armazene os dados do seu pet.</li>
+        <li>📇 <strong>Só o seu cadastro vai para a nuvem:</strong> nome, e-mail e celular (se informado) são guardados em nosso banco de dados (Google Firebase, servidor no Brasil) para manter seu registro e, <strong>se você autorizar</strong>, enviar dicas e novidades.</li>
+        <li>🚫 <strong>Não vendemos seus dados</strong> e não os usamos para nada além do descrito aqui.</li>
+        <li>🗑️ <strong>Você apaga tudo:</strong> os dados do aparelho, desinstalando o app ou em Ajustes → "Apagar todos os dados"; o cadastro na nuvem, pedindo pelo e-mail de contato.</li>
       </ul>
 
       <h2>2. Dados que o app trata</h2>
-      <h3>2.1 Dados que você fornece (ficam no seu aparelho)</h3>
+      <h3>2.1 Cadastro (enviado ao nosso banco de dados)</h3>
       <ul>
-        <li><strong>Conta:</strong> nome, e-mail e, opcionalmente, celular. A <strong>senha nunca é armazenada em texto</strong>, guardamos apenas um <em>hash</em> criptográfico dela no próprio aparelho.</li>
+        <li><strong>Nome, e-mail e, opcionalmente, celular</strong>, informados por você no primeiro acesso (ou obtidos do Google, se você entrar com sua conta Google). Não há senha: o app não exige login.</li>
+        <li>Junto vão a <strong>plataforma</strong> (Android/iOS), a <strong>versão do app</strong> e a sua escolha sobre <strong>receber dicas e novidades</strong> (opt-in).</li>
+        <li>Finalidade: manter o registro de quem usa o app, dar suporte e, <strong>apenas com o seu consentimento</strong>, enviar comunicações. Armazenado no <strong>Google Firebase (Firestore)</strong>, em servidor localizado no Brasil (São Paulo).</li>
+      </ul>
+      <h3>2.2 Dados do pet (ficam no seu aparelho)</h3>
+      <ul>
         <li><strong>Dados do pet:</strong> nome, espécie, raça, data de nascimento, sexo, peso e rotina.</li>
         <li><strong>Dados de saúde do pet:</strong> vacinas, vermífugos, consultas, exames, medicamentos, banhos e registros de passeios.</li>
         <li><strong>Fotos:</strong> foto do pet, do rótulo de vacinas e de exames, escolhidas por você e guardadas localmente.</li>
       </ul>
-      <div class="note">Todos esses dados são gravados <strong>somente no armazenamento local do aparelho</strong>. Não são enviados para nós nem para terceiros, exceto nos casos da seção 3.</div>
+      <div class="note">Os dados do pet, de saúde e as fotos são gravados <strong>somente no armazenamento local do aparelho</strong>. Não são enviados para nós nem para terceiros, exceto nos casos da seção 3.</div>
 
-      <h3>2.2 Localização</h3>
+      <h3>2.3 Localização</h3>
       <ul>
         <li>Ao abrir o <strong>mapa</strong> de clínicas, pet shops e locais pet friendly, o app usa a <strong>localização aproximada do aparelho</strong> para buscar lugares por perto.</li>
         <li>A localização é usada <strong>apenas naquele momento</strong> para a busca e <strong>não é armazenada</strong> por nós.</li>
       </ul>
 
-      <h3>2.3 Dados coletados automaticamente (quando aplicável)</h3>
+      <h3>2.4 Dados coletados automaticamente (quando aplicável)</h3>
       <ul>
         <li><strong>Anúncios (Google AdMob):</strong> se o app exibir anúncios, o AdMob pode coletar identificadores de publicidade e dados do dispositivo para exibir e medir anúncios.</li>
         <li><strong>Assinaturas (RevenueCat + App Store / Google Play):</strong> para gerenciar a versão Pro, processamos o status da compra pela loja e pelo RevenueCat. <strong>Não temos acesso aos dados do seu cartão</strong>, o pagamento é feito inteiramente pela Apple/Google.</li>
@@ -100,6 +106,7 @@
       <div class="tbl-wrap">
         <table>
           <tr><th>Serviço</th><th>Para quê</th><th>O que recebe</th></tr>
+          <tr><td>Google Firebase (Firestore)</td><td>Armazenar o cadastro (operador de dados)</td><td>Nome, e-mail, celular e opt-in de comunicações</td></tr>
           <tr><td>Google Places / OpenStreetMap</td><td>Mostrar locais no mapa</td><td>Localização aproximada e o termo da busca</td></tr>
           <tr><td>Google AdMob <em>(se houver anúncios)</em></td><td>Exibir e medir anúncios</td><td>Identificador de publicidade e dados do dispositivo</td></tr>
           <tr><td>RevenueCat + Apple/Google <em>(se houver assinatura)</em></td><td>Processar e validar a assinatura Pro</td><td>Identificador da compra e do dispositivo</td></tr>
@@ -108,7 +115,7 @@
       <p>Cada serviço tem sua própria política de privacidade. <strong>Não compartilhamos os dados do seu pet, de saúde ou de conta</strong> com nenhum deles.</p>
 
       <h2>4. Base legal e finalidade (LGPD)</h2>
-      <p>Tratamos dados com base em: <strong>execução de contrato</strong> (fazer o app funcionar para você), <strong>consentimento</strong> (localização, quando você abre o mapa) e <strong>legítimo interesse</strong> (melhorar e sustentar o app). A finalidade é sempre oferecer e manter os recursos do Xodó.</p>
+      <p>Tratamos dados com base em: <strong>execução de contrato</strong> (fazer o app funcionar para você), <strong>consentimento</strong> (localização, quando você abre o mapa; e envio de dicas e novidades, que você autoriza ou não no cadastro e pode revogar a qualquer momento) e <strong>legítimo interesse</strong> (manter o registro de usuários, melhorar e sustentar o app). A finalidade é sempre oferecer e manter os recursos do Xodó.</p>
 
       <h2>5. Anúncios e crianças</h2>
       <ul>
@@ -117,16 +124,16 @@
       </ul>
 
       <h2>6. Segurança</h2>
-      <p>Os dados ficam no seu aparelho, protegidos pelos mecanismos do sistema operacional. A senha é guardada apenas como <em>hash</em>. Ainda assim, nenhum método é 100% seguro; recomendamos manter o aparelho protegido por senha/biometria.</p>
+      <p>Os dados do pet ficam no seu aparelho, protegidos pelos mecanismos do sistema operacional. O cadastro fica no Google Firebase, com transmissão criptografada (HTTPS) e acesso restrito ao controlador. Ainda assim, nenhum método é 100% seguro; recomendamos manter o aparelho protegido por senha/biometria.</p>
 
       <h2>7. Retenção e exclusão</h2>
       <ul>
-        <li>Os dados permanecem no aparelho <strong>enquanto o app estiver instalado</strong>.</li>
-        <li>Para <strong>apagar tudo</strong>, desinstale o app ou limpe os dados nas configurações do sistema. Como não há cópia em nossos servidores, isso remove seus dados por completo.</li>
+        <li>Os dados do pet permanecem no aparelho <strong>enquanto o app estiver instalado</strong>. Para apagá-los, desinstale o app, limpe os dados nas configurações do sistema ou use <strong>Ajustes → "Apagar todos os dados"</strong> dentro do app.</li>
+        <li>O <strong>cadastro</strong> (nome, e-mail, celular) permanece em nosso banco até você pedir a exclusão. Para excluí-lo, envie um e-mail para <a href="mailto:imprensa@rafasbatista.com.br">imprensa@rafasbatista.com.br</a> a partir do e-mail cadastrado, com o assunto "Excluir cadastro"; atendemos em até 15 dias e removemos nome, e-mail, celular e preferências, sem retenção adicional.</li>
       </ul>
 
       <h2>8. Seus direitos (LGPD / GDPR)</h2>
-      <p>Você tem direito a acessar, corrigir, portar e excluir seus dados. Como o tratamento é local, você exerce esses direitos diretamente pelo app (editando ou apagando registros) ou desinstalando-o. Em caso de dúvidas, fale com a gente pelo e-mail de contato.</p>
+      <p>Você tem direito a acessar, corrigir, portar e excluir seus dados. Os dados do pet você gerencia diretamente pelo app (editando ou apagando registros). O cadastro você corrige em "Sua conta" dentro do app e exclui pelo e-mail de contato (seção 7). Para revogar o consentimento de comunicações, basta pedir pelo mesmo e-mail.</p>
 
       <h2>9. Alterações nesta política</h2>
       <p>Podemos atualizar esta política. Mudanças relevantes serão comunicadas no app ou nesta página, com nova data de "Última atualização".</p>
