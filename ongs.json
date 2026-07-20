@@ -1,0 +1,5 @@
+{
+  "atualizadoEm": "2026-07-20",
+  "observacao": "Lista de ONGs de resgate exibida no app (Ajustes > ONGs de resgate). Para incluir uma ONG, acrescente um item em 'ongs' e suba este arquivo no repositorio appxodo-site. O app atualiza sozinho (cache de 12h), sem publicar versao nova.",
+  "ongs": []
+}
