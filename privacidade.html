@@ -57,7 +57,7 @@
 
   <main>
     <div class="card">
-      <span class="upd">Última atualização: 19 de julho de 2026</span>
+      <span class="upd">Última atualização: 28 de julho de 2026</span>
 
       <p>O <strong>Xodó</strong> ("app", "nós") é um aplicativo para tutores de cães e gatos que reúne carteirinha de vacinação, lembretes e cuidados diários. Esta política explica quais dados o app trata, como e por quê. Ao usar o Xodó, você concorda com as práticas aqui descritas.</p>
       <p style="margin-top:10px;">
@@ -91,13 +91,15 @@
 
       <h3>2.3 Localização</h3>
       <ul>
-        <li>Ao abrir o <strong>mapa</strong> de clínicas, pet shops e locais pet friendly, o app usa a <strong>localização aproximada do aparelho</strong> para buscar lugares por perto.</li>
+        <li>Ao abrir o <strong>mapa</strong> de clínicas, pet shops e locais pet friendly, o app pede permissão e usa a <strong>localização do aparelho</strong> para buscar lugares por perto. A coordenada é enviada ao provedor do mapa com precisão suficiente para localizar estabelecimentos próximos de você.</li>
         <li>A localização é usada <strong>apenas naquele momento</strong> para a busca e <strong>não é armazenada</strong> por nós.</li>
+        <li>Você pode negar ou revogar essa permissão a qualquer momento nas configurações do sistema. O resto do app continua funcionando normalmente sem ela.</li>
       </ul>
 
       <h3>2.4 Dados coletados automaticamente (quando aplicável)</h3>
       <ul>
         <li><strong>Anúncios (Google AdMob):</strong> se o app exibir anúncios, o AdMob pode coletar identificadores de publicidade e dados do dispositivo para exibir e medir anúncios.</li>
+        <li><strong>Consentimento de anúncios:</strong> se você estiver no <strong>Espaço Econômico Europeu ou no Reino Unido</strong>, o app exibe um formulário de consentimento (plataforma de mensagens do Google) <strong>antes</strong> de solicitar qualquer anúncio, e respeita a sua escolha. Você pode rever essa decisão quando quiser em <strong>Ajustes → Privacidade dos anúncios</strong>. No <strong>iOS</strong>, o app também pede a autorização de rastreamento do sistema (App Tracking Transparency) antes de anúncios personalizados.</li>
         <li><strong>Assinaturas (RevenueCat + App Store / Google Play):</strong> para gerenciar a versão Pro, processamos o status da compra pela loja e pelo RevenueCat. <strong>Não temos acesso aos dados do seu cartão</strong>, o pagamento é feito inteiramente pela Apple/Google.</li>
       </ul>
 
@@ -107,19 +109,37 @@
         <table>
           <tr><th>Serviço</th><th>Para quê</th><th>O que recebe</th></tr>
           <tr><td>Google Firebase (Firestore)</td><td>Armazenar o cadastro (operador de dados)</td><td>Nome, e-mail, celular e opt-in de comunicações</td></tr>
-          <tr><td>Google Places / OpenStreetMap</td><td>Mostrar locais no mapa</td><td>Localização aproximada e o termo da busca</td></tr>
+          <tr><td>Google Places / OpenStreetMap</td><td>Mostrar locais no mapa</td><td>A localização do aparelho e o termo da busca</td></tr>
           <tr><td>Google AdMob <em>(se houver anúncios)</em></td><td>Exibir e medir anúncios</td><td>Identificador de publicidade e dados do dispositivo</td></tr>
           <tr><td>RevenueCat + Apple/Google <em>(se houver assinatura)</em></td><td>Processar e validar a assinatura Pro</td><td>Identificador da compra e do dispositivo</td></tr>
         </table>
       </div>
       <p>Cada serviço tem sua própria política de privacidade. <strong>Não compartilhamos os dados do seu pet, de saúde ou de conta</strong> com nenhum deles.</p>
 
-      <h2>4. Base legal e finalidade (LGPD)</h2>
-      <p>Tratamos dados com base em: <strong>execução de contrato</strong> (fazer o app funcionar para você), <strong>consentimento</strong> (localização, quando você abre o mapa; e envio de dicas e novidades, que você autoriza ou não no cadastro e pode revogar a qualquer momento) e <strong>legítimo interesse</strong> (manter o registro de usuários, melhorar e sustentar o app). A finalidade é sempre oferecer e manter os recursos do Xodó.</p>
+      <h3>3.1 Transferências internacionais</h3>
+      <p>O Xodó é operado a partir do <strong>Brasil</strong>. O cadastro fica no Google Firebase em servidor <strong>no Brasil (São Paulo)</strong>. Já os serviços de anúncios (Google AdMob), de assinatura (RevenueCat, Apple, Google) e de mapa (Google Places) são operados globalmente e podem tratar dados <strong>fora do seu país</strong>, inclusive nos Estados Unidos.</p>
+      <p style="margin-top:8px;">Se você está no Espaço Econômico Europeu ou no Reino Unido, essas transferências acontecem com base nos mecanismos previstos no GDPR, em especial as <strong>Cláusulas Contratuais Padrão</strong> adotadas por esses fornecedores nos contratos de tratamento de dados. Os detalhes estão nas políticas de privacidade de cada um deles, listados na tabela acima.</p>
+
+      <h2>4. Base legal e finalidade (LGPD e GDPR)</h2>
+      <p>A finalidade é sempre oferecer e manter os recursos do Xodó. As bases legais, por tipo de tratamento:</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Tratamento</th><th>Base legal (LGPD)</th><th>Base legal (GDPR)</th></tr>
+          <tr><td>Fazer o app funcionar (dados do pet, no aparelho)</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+          <tr><td>Cadastro do tutor (nome, e-mail, celular)</td><td>Execução de contrato e legítimo interesse</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+          <tr><td>Envio de dicas e novidades (opt-in)</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
+          <tr><td>Localização para o mapa</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
+          <tr><td>Anúncios personalizados</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
+          <tr><td>Anúncios não personalizados e manutenção do app</td><td>Legítimo interesse</td><td>Legítimo interesse, Art. 6(1)(f)</td></tr>
+          <tr><td>Processar a assinatura Pro</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+        </table>
+      </div>
+      <p>Onde a base é <strong>consentimento</strong>, você pode revogá-lo a qualquer momento, sem prejudicar a validade do que foi tratado antes da revogação. Não usamos os seus dados para <strong>decisões automatizadas</strong> nem para definição de perfil com efeitos jurídicos sobre você.</p>
 
       <h2>5. Anúncios e crianças</h2>
       <ul>
         <li>O Xodó é destinado a <strong>maiores de 13 anos</strong> (tutores responsáveis pelo pet). Não coletamos intencionalmente dados de crianças.</li>
+        <li>No <strong>Espaço Econômico Europeu</strong>, o GDPR fixa a idade mínima para consentir com serviços digitais entre 13 e 16 anos, conforme o país. Se você está abaixo dessa idade no seu país, use o app apenas com autorização de quem é responsável por você.</li>
         <li>Anúncios, quando exibidos, seguem as políticas de conteúdo adequado da Apple e do Google.</li>
       </ul>
 
@@ -133,7 +153,16 @@
       </ul>
 
       <h2>8. Seus direitos (LGPD / GDPR)</h2>
-      <p>Você tem direito a acessar, corrigir, portar e excluir seus dados. Os dados do pet você gerencia diretamente pelo app (editando ou apagando registros). O cadastro você corrige em "Sua conta" dentro do app e exclui pelo e-mail de contato (seção 7). Para revogar o consentimento de comunicações, desmarque "Quero receber dicas de cuidado e novidades por e-mail" em "Sua conta" dentro do app, ou peça pelo mesmo e-mail de contato.</p>
+      <p>Você tem direito a <strong>acessar</strong>, <strong>corrigir</strong>, <strong>portar</strong> e <strong>excluir</strong> seus dados, além de <strong>restringir</strong> ou <strong>se opor</strong> a determinados tratamentos e <strong>revogar consentimentos</strong> já dados.</p>
+      <p style="margin-top:8px;">Na prática, no Xodó:</p>
+      <ul>
+        <li><strong>Dados do pet:</strong> você gerencia direto no app, editando ou apagando registros, e apaga tudo em <strong>Ajustes → Apagar todos os dados</strong>. Como ficam só no seu aparelho, nós não temos acesso a eles.</li>
+        <li><strong>Cadastro:</strong> corrija em <strong>Sua conta</strong> dentro do app; para excluir, escreva para o e-mail de contato (seção 7).</li>
+        <li><strong>Dicas e novidades:</strong> desmarque "Quero receber dicas de cuidado e novidades por e-mail" em <strong>Sua conta</strong>, ou peça pelo e-mail de contato.</li>
+        <li><strong>Anúncios:</strong> revise seu consentimento em <strong>Ajustes → Privacidade dos anúncios</strong> (onde aplicável) e a autorização de rastreamento nas configurações do sistema.</li>
+        <li><strong>Localização:</strong> revogue a permissão nas configurações do sistema.</li>
+      </ul>
+      <p><strong>Reclamação a uma autoridade.</strong> Se você acha que tratamos seus dados de forma indevida, pode reclamar à autoridade de proteção de dados competente: no Brasil, a <strong>ANPD</strong>; no Espaço Econômico Europeu, a autoridade de proteção de dados do <strong>seu país de residência</strong>; no Reino Unido, o <strong>ICO</strong>. Preferimos, é claro, que você fale conosco primeiro pelo e-mail de contato.</p>
 
       <h2>9. Alterações nesta política</h2>
       <p>Podemos atualizar esta política. Mudanças relevantes serão comunicadas no app ou nesta página, com nova data de "Última atualização".</p>
