@@ -514,25 +514,6 @@
     // Mascotes animados: WebM VP9 com alpha. Safari não decodifica VP9 com canal
     // alpha (mostraria quadrado preto), então troca o <video> pelo PNG do poster
     // quando o suporte não é garantido — ou quando o usuário prefere menos movimento.
-    var probe = document.createElement('video');
-    var canVP9 = !!(probe.canPlayType && probe.canPlayType('video/webm; codecs="vp9"'));
-    var isSafari = /safari/i.test(navigator.userAgent) &&
-                   !/chrome|chromium|crios|fxios|edg|android/i.test(navigator.userAgent);
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!canVP9 || isSafari || reduceMotion) {
-      // vídeos com data-solid têm fundo próprio (sem alpha) — só trocam se o
-      // motivo for reduced-motion; Safari reproduz VP9 opaco sem problema.
-      var sel = (!canVP9 || reduceMotion) ? 'video.mascote-anim' : 'video.mascote-anim:not([data-solid])';
-      Array.prototype.slice.call(document.querySelectorAll(sel)).forEach(function(v){
-        var img = document.createElement('img');
-        img.src = v.getAttribute('poster');
-        img.alt = '';
-        img.setAttribute('aria-hidden','true');
-        img.className = v.className;
-        img.width = 240; img.height = 240;
-        v.parentNode.replaceChild(img, v);
-      });
-    }
 
     var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
     if ('IntersectionObserver' in window) {
@@ -568,5 +549,6 @@
     }
   })();
 </script>
+  <script src="assets/mascotes.js" defer></script>
 </body>
 </html>
