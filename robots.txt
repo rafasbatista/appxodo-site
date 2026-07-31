@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xodoapp.rafasbatista.app.br/sitemap.xml
