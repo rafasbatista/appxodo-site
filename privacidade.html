@@ -119,6 +119,7 @@
         <li><strong>Anúncios (Google AdMob):</strong> se o app exibir anúncios, o AdMob pode coletar identificadores de publicidade e dados do dispositivo para exibir e medir anúncios.</li>
         <li><strong>Consentimento de anúncios:</strong> se você estiver no <strong>Espaço Econômico Europeu ou no Reino Unido</strong>, o app exibe um formulário de consentimento (plataforma de mensagens do Google) <strong>antes</strong> de solicitar qualquer anúncio, e respeita a sua escolha. Você pode rever essa decisão quando quiser em <strong>Ajustes → Privacidade dos anúncios</strong>. No <strong>iOS</strong>, o app também pede a autorização de rastreamento do sistema (App Tracking Transparency) antes de anúncios personalizados.</li>
         <li><strong>Assinaturas (RevenueCat + App Store / Google Play):</strong> para gerenciar a versão Pro, processamos o status da compra pela loja e pelo RevenueCat. <strong>Não temos acesso aos dados do seu cartão</strong>, o pagamento é feito inteiramente pela Apple/Google.</li>
+        <li><strong>Relatórios de falha (Sentry):</strong> quando o app apresenta um erro, enviamos um relatório técnico para descobrirmos e corrigirmos o problema: modelo do aparelho, versão do sistema, versão do app e o ponto do código em que a falha aconteceu. <strong>Esse relatório não inclui os dados do seu pet, o seu cadastro nem o seu endereço de rede</strong>, e e-mails ou telefones que porventura apareçam no texto de um erro são mascarados antes do envio.</li>
       </ul>
 
       <h2>3. Com quem compartilhamos</h2>
@@ -130,13 +131,14 @@
           <tr><td>Google Places / OpenStreetMap</td><td>Mostrar locais no mapa</td><td>A localização do aparelho e o termo da busca</td></tr>
           <tr><td>Google AdMob <em>(se houver anúncios)</em></td><td>Exibir e medir anúncios</td><td>Identificador de publicidade e dados do dispositivo</td></tr>
           <tr><td>RevenueCat + Apple/Google <em>(se houver assinatura)</em></td><td>Processar e validar a assinatura Pro</td><td>Identificador da compra e do dispositivo</td></tr>
+          <tr><td>Sentry <em>(quando o app falha)</em></td><td>Detectar e corrigir erros do app</td><td>Modelo do aparelho, versão do sistema e do app, e o ponto do código onde ocorreu a falha</td></tr>
         </table>
       </div>
       <p class="tbl-hint">↔ Deslize a tabela para o lado para ver tudo.</p>
       <p>Cada serviço tem sua própria política de privacidade. <strong>Não compartilhamos os dados do seu pet, de saúde ou de conta</strong> com nenhum deles.</p>
 
       <h3>3.1 Transferências internacionais</h3>
-      <p>O Xodó é operado a partir do <strong>Brasil</strong>. O cadastro fica no Google Firebase em servidor <strong>no Brasil (São Paulo)</strong>. Já os serviços de anúncios (Google AdMob), de assinatura (RevenueCat, Apple, Google) e de mapa (Google Places) são operados globalmente e podem tratar dados <strong>fora do seu país</strong>, inclusive nos Estados Unidos.</p>
+      <p>O Xodó é operado a partir do <strong>Brasil</strong>. O cadastro fica no Google Firebase em servidor <strong>no Brasil (São Paulo)</strong>. Já os serviços de anúncios (Google AdMob), de assinatura (RevenueCat, Apple, Google), de mapa (Google Places) e de relatório de falhas (Sentry) são operados globalmente e podem tratar dados <strong>fora do seu país</strong>, inclusive nos Estados Unidos.</p>
       <p style="margin-top:8px;">Se você está no Espaço Econômico Europeu ou no Reino Unido, essas transferências acontecem com base nos mecanismos previstos no GDPR, em especial as <strong>Cláusulas Contratuais Padrão</strong> adotadas por esses fornecedores nos contratos de tratamento de dados. Os detalhes estão nas políticas de privacidade de cada um deles, listados na tabela acima.</p>
 
       <h2>4. Base legal e finalidade (LGPD e GDPR)</h2>
