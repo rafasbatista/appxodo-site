@@ -333,10 +333,14 @@
         <h1>Todo o cuidado do seu <span class="hl">xodó</span> num lugar só</h1>
         <p class="slogan">Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Simples, offline e cheio de carinho, do jeitinho que seu cão ou gato merece.</p>
         <div class="badges">
-          <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960" target="_blank" rel="noopener">
+          <!-- ⚠️ SEM target="_blank" de propósito: o navegador embutido do Instagram no iPhone
+               (WKWebView) ignora links de nova aba, e o botão simplesmente não faz nada.
+               Sem o atributo, a navegação acontece na própria janela e o iOS consegue
+               interceptar o link e abrir a App Store. Não recolocar. -->
+          <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960">
             <img src="assets/img/appstore-badge.svg" alt="Baixar na App Store" width="120" height="40">
           </a>
-          <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dselo" target="_blank" rel="noopener">
+          <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dselo">
             <img src="assets/img/googleplay-badge.png" alt="Disponível no Google Play" width="646" height="192">
           </a>
         </div>
@@ -468,8 +472,8 @@
         <!-- O href já vai preenchido com o Google Play: se o JS não rodar, o botão continua
              levando pra uma loja de verdade. Com JS, o script lá embaixo troca pra App Store
              quando o visitante estiver num iPhone/iPad. -->
-        <a class="btn" id="download" href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta" target="_blank" rel="noopener"><span class="ring"></span>Baixar o Xodó</a>
-        <p class="cta-alt">Ou vá direto: <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960" target="_blank" rel="noopener">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta_link" target="_blank" rel="noopener">Google Play</a></p>
+        <a class="btn" id="download" href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta"><span class="ring"></span>Baixar o Xodó</a>
+        <p class="cta-alt">Ou vá direto: <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta_link">Google Play</a></p>
         <p class="cta-alt cta-alt2">Siga <a href="https://www.instagram.com/xodo.app/" target="_blank" rel="noopener">@xodo.app</a></p>
         <div class="cta-mascotes" aria-hidden="true">
           <video class="cta-dog mascote-anim" data-solid autoplay loop muted playsinline
