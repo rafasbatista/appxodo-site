@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xodó: O guia de bolso do seu pet 🐾</title>
 <meta name="description" content="Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Tudo do seu cão ou gato num app só, simples, offline e cheio de carinho.">
+<!-- Faixa nativa do Safari no iPhone/iPad oferecendo baixar (ou abrir) o app -->
+<meta name="apple-itunes-app" content="app-id=6795604960">
 <meta property="og:title" content="Xodó: O guia de bolso do seu pet 🐾">
 <meta property="og:description" content="Carteirinha de vacinação, lembretes e cuidados diários do seu cão ou gato. Simples, offline e cheio de carinho.">
 <meta property="og:url" content="https://xodoapp.rafasbatista.app.br">
@@ -102,10 +104,9 @@
   .hero-txt .slogan{margin-top:14px;font-size:19px;font-weight:600;opacity:.96;max-width:520px;}
   /* selos oficiais das lojas — só os selos, mesma altura, sem caixa em volta */
   .badges{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .badges a{display:block;line-height:0;}
   .badges img{display:block;height:48px;width:auto;transition:transform .3s;}
-  .badges img:hover{transform:translateY(-3px);}
-  .badge-soon{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#3B2A00;
-    font-weight:900;font-size:12px;letter-spacing:.6px;border-radius:999px;padding:7px 14px;text-transform:uppercase;}
+  .badges a:hover img{transform:translateY(-3px);}
 
   /* tópicos em caixas — ficam ABAIXO do mockup, em faixa própria */
   .hero-mini{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
@@ -242,6 +243,9 @@
     padding:56px 44px 48px;text-align:center;color:#fff;box-shadow:0 24px 60px rgba(15,46,42,.22);}
   .cta h2{font-size:32px;font-weight:900;letter-spacing:-.5px;}
   .cta p{color:#DFF7F2;margin:10px auto 26px;max-width:480px;}
+  /* linha de apoio abaixo do botão: links diretos das lojas, caso o JS não role */
+  .cta p.cta-alt{font-size:13.5px;color:#CFF1EB;font-weight:600;margin:20px auto 0;max-width:520px;}
+  .cta p.cta-alt a{color:#fff;text-decoration:underline;}
   .btn{position:relative;display:inline-block;background:#fff;color:var(--primaryDeep);font-weight:900;border-radius:16px;
     padding:15px 30px;font-size:16.5px;box-shadow:0 10px 26px rgba(6,50,45,.28);transition:transform .3s;}
   .btn:hover{transform:translateY(-3px) scale(1.03);}
@@ -327,9 +331,12 @@
         <h1>Todo o cuidado do seu <span class="hl">xodó</span> num lugar só</h1>
         <p class="slogan">Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Simples, offline e cheio de carinho, do jeitinho que seu cão ou gato merece.</p>
         <div class="badges">
-          <img src="assets/img/appstore-badge.svg" alt="Baixar na App Store" width="120" height="40">
-          <img src="assets/img/googleplay-badge.png" alt="Disponível no Google Play" width="646" height="192">
-          <span class="badge-soon">🚀 Em breve</span>
+          <a href="https://apps.apple.com/app/id6795604960" target="_blank" rel="noopener">
+            <img src="assets/img/appstore-badge.svg" alt="Baixar na App Store" width="120" height="40">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dselo" target="_blank" rel="noopener">
+            <img src="assets/img/googleplay-badge.png" alt="Disponível no Google Play" width="646" height="192">
+          </a>
         </div>
       </div>
       <div class="hero-phone">
@@ -454,14 +461,13 @@
   <section style="padding-top:20px;">
     <div class="wrap">
       <div class="cta reveal">
-        <h2>Chegando em breve nas lojas 💚</h2>
-        <p>Siga o Xodó no Instagram e seja avisado no lançamento, em primeira mão.</p>
-        <a class="btn" href="https://www.instagram.com/xodo.app/" target="_blank" rel="noopener"><span class="ring"></span>Seguir @xodo.app</a>
-        <!-- LANÇAMENTO: quando o app estiver nas lojas, trocar o botão acima pelo download inteligente:
-             1) preencher STORE_LINKS no script lá embaixo (App Store + Play, com UTM);
-             2) descomentar: <a class="btn" id="download" href="#">Baixar o Xodó</a>
-             3) adicionar no <head> o Smart App Banner da Apple:
-                <meta name="apple-itunes-app" content="app-id=6795604960"> -->
+        <h2>Baixe o Xodó agora 💚</h2>
+        <p>Grátis na App Store e no Google Play, pro seu iPhone ou Android.</p>
+        <!-- O href já vai preenchido com o Google Play: se o JS não rodar, o botão continua
+             levando pra uma loja de verdade. Com JS, o script lá embaixo troca pra App Store
+             quando o visitante estiver num iPhone/iPad. -->
+        <a class="btn" id="download" href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta" target="_blank" rel="noopener"><span class="ring"></span>Baixar o Xodó</a>
+        <p class="cta-alt">Ou vá direto: <a href="https://apps.apple.com/app/id6795604960" target="_blank" rel="noopener">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta_link" target="_blank" rel="noopener">Google Play</a> · Siga <a href="https://www.instagram.com/xodo.app/" target="_blank" rel="noopener">@xodo.app</a></p>
         <div class="cta-mascotes" aria-hidden="true">
           <video class="cta-dog mascote-anim" data-solid autoplay loop muted playsinline
                  poster="assets/mascotes/anim/dog-festa-teal.jpg" width="320" height="320">
@@ -534,11 +540,14 @@
       reveals.forEach(function(el){ el.classList.add('in'); });
     }
 
-    // LANÇAMENTO: download inteligente (roteia pro app store certo pelo aparelho).
-    // Preencher os links reais e descomentar o botão #download no CTA.
+    // Download inteligente: roteia pro app store certo pelo aparelho.
+    // ⚠️ Sobre rastreio: `utm_source=` solto na URL NÃO é lido por nenhuma das duas lojas.
+    // No Google Play, a origem só chega ao Play Console dentro do parâmetro `referrer`
+    // (URL-encoded, por isso os %3D e %26). Na Apple, o equivalente exigiria os tokens
+    // pt/ct de Campaign Link do App Analytics, que não temos, então o link vai limpo.
     var STORE_LINKS = {
-      ios: '',     // ex: https://apps.apple.com/br/app/id6795604960?utm_source=site&utm_medium=cta
-      android: ''  // ex: https://play.google.com/store/apps/details?id=com.xodo.petapp&utm_source=site&utm_medium=cta
+      ios: 'https://apps.apple.com/app/id6795604960',
+      android: 'https://play.google.com/store/apps/details?id=com.xodo.petapp&referrer=utm_source%3Dsite%26utm_medium%3Dcta'
     };
     var dl = document.getElementById('download');
     if (dl && (STORE_LINKS.ios || STORE_LINKS.android)) {
