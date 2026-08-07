@@ -103,6 +103,15 @@
     background:var(--gold);opacity:.55;z-index:-1;}
   .hero-txt .slogan{margin-top:14px;font-size:19px;font-weight:600;opacity:.96;max-width:520px;}
   /* selos oficiais das lojas — só os selos, mesma altura, sem caixa em volta */
+  /* Aviso que só aparece dentro do navegador embutido do Instagram/Facebook no iPhone,
+     onde a ida pra App Store é bloqueada pelo app e o toque não faz nada. Ver o script. */
+  .aviso-iab{margin-top:18px;max-width:520px;font-size:13.5px;font-weight:700;line-height:1.5;
+    background:rgba(255,179,0,.22);border:1.5px solid rgba(255,179,0,.65);color:#FFF6E0;
+    border-radius:14px;padding:12px 16px;}
+  .aviso-iab b{color:#fff;}
+  .aviso-iab-cta{margin:22px auto 0;}
+  .aviso-iab[hidden]{display:none;}
+
   .badges{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
   .badges a{display:block;line-height:0;}
   .badges img{display:block;height:48px;width:auto;transition:transform .3s;}
@@ -333,10 +342,8 @@
         <h1>Todo o cuidado do seu <span class="hl">xodó</span> num lugar só</h1>
         <p class="slogan">Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Simples, offline e cheio de carinho, do jeitinho que seu cão ou gato merece.</p>
         <div class="badges">
-          <!-- ⚠️ SEM target="_blank" de propósito: o navegador embutido do Instagram no iPhone
-               (WKWebView) ignora links de nova aba, e o botão simplesmente não faz nada.
-               Sem o atributo, a navegação acontece na própria janela e o iOS consegue
-               interceptar o link e abrir a App Store. Não recolocar. -->
+          <!-- ⚠️ SEM target="_blank" de propósito: WKWebView (navegador embutido de app)
+               ignora link de nova aba e o botão nao faz nada. Não recolocar. -->
           <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960">
             <img src="assets/img/appstore-badge.svg" alt="Baixar na App Store" width="120" height="40">
           </a>
@@ -344,6 +351,7 @@
             <img src="assets/img/googleplay-badge.png" alt="Disponível no Google Play" width="646" height="192">
           </a>
         </div>
+        <p class="aviso-iab" hidden>⚠️ Pelo Instagram, o botão da App Store não abre: ele bloqueia a ida pra loja. Toque em <b>⋯</b> no topo e escolha <b>Abrir no navegador</b>.</p>
       </div>
       <div class="hero-phone">
         <div class="phone"><img src="assets/img/shot-1.webp" alt="Tela inicial do Xodó com o checklist diário do pet" width="516" height="1118"></div>
@@ -474,6 +482,7 @@
              quando o visitante estiver num iPhone/iPad. -->
         <a class="btn" id="download" href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta"><span class="ring"></span>Baixar o Xodó</a>
         <p class="cta-alt">Ou vá direto: <a href="https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.xodo.petapp&amp;referrer=utm_source%3Dsite%26utm_medium%3Dcta_link">Google Play</a></p>
+        <p class="aviso-iab aviso-iab-cta" hidden>⚠️ Pelo Instagram, o botão da App Store não abre: ele bloqueia a ida pra loja. Toque em <b>⋯</b> no topo e escolha <b>Abrir no navegador</b>.</p>
         <p class="cta-alt cta-alt2">Siga <a href="https://www.instagram.com/xodo.app/" target="_blank" rel="noopener">@xodo.app</a></p>
         <div class="cta-mascotes" aria-hidden="true">
           <video class="cta-dog mascote-anim" data-solid autoplay loop muted playsinline
@@ -556,12 +565,25 @@
       ios: 'https://apps.apple.com/br/app/xod%C3%B3-vacinas-e-cuidados-pet/id6795604960',
       android: 'https://play.google.com/store/apps/details?id=com.xodo.petapp&referrer=utm_source%3Dsite%26utm_medium%3Dcta'
     };
+    var ua = navigator.userAgent;
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+
     var dl = document.getElementById('download');
     if (dl && (STORE_LINKS.ios || STORE_LINKS.android)) {
-      var ua = navigator.userAgent;
-      var isIOS = /iPhone|iPad|iPod/i.test(ua);
-      var isAndroid = /Android/i.test(ua);
       dl.href = isIOS ? STORE_LINKS.ios : isAndroid ? STORE_LINKS.android : (STORE_LINKS.android || STORE_LINKS.ios);
+    }
+
+    // Navegador embutido do Instagram/Facebook no iPhone: o app BLOQUEIA de proposito a
+    // passagem para outro app, e a App Store e outro app. O toque no botao nao faz nada,
+    // sem erro e sem log. Nao existe contorno pelo lado do site (nem itms-apps://, nem
+    // window.open, nem redirect): a unica saida e o usuario abrir a pagina no Safari.
+    // Por isso aqui a gente so AVISA, e so pra quem esta nesse contexto especifico.
+    // O Google Play nao sofre disso porque no iPhone o link dele e apenas uma pagina web.
+    // FBAN/FB_IAB cobrem o navegador do Facebook, que tem o mesmo comportamento.
+    if (isIOS && /Instagram|FBAN|FB_IAB|FBAV/i.test(ua)) {
+      var avisos = document.querySelectorAll('.aviso-iab');
+      for (var a = 0; a < avisos.length; a++) { avisos[a].hidden = false; }
     }
   })();
 </script>
