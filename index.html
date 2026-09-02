@@ -203,6 +203,21 @@
   .mini-phone img{display:block;width:100%;border-radius:26px;}
   .mini-phone figcaption{color:#B9CFCA;text-align:center;font-size:13px;font-weight:700;padding:9px 0 3px;}
 
+  /* ===== vídeo do app (02/09/2026) =====
+     Roda sozinho no MUDO, que é a única forma de autoplay que os navegadores permitem.
+     O botão de som fica visível por cima, porque quem não vê o controle não procura. */
+  .video-app{display:flex;justify-content:center;margin:6px 0 30px;}
+  .video-moldura{position:relative;width:min(268px,72vw);border-radius:36px;padding:10px;
+    background:linear-gradient(170deg,#12332e,#0a1f1c);box-shadow:0 22px 54px rgba(15,46,42,.28);}
+  .video-moldura video{display:block;width:100%;border-radius:27px;background:#0F7264;}
+  .video-som{position:absolute;right:18px;bottom:18px;width:46px;height:46px;border:0;cursor:pointer;
+    border-radius:50%;background:rgba(14,36,34,.72);backdrop-filter:blur(6px);color:#fff;font-size:19px;
+    display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);}
+  .video-som:hover{transform:scale(1.08);background:rgba(14,36,34,.9);}
+  .video-som:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  @media (prefers-reduced-motion:reduce){.video-moldura video{animation:none;}}
+
   /* ===== pro ===== */
   .pro-sec{padding:78px 0;}
   .pro-card{position:relative;overflow:hidden;border-radius:30px;color:#fff;padding:54px 48px;
@@ -405,6 +420,17 @@
         <h2 class="sec">Dá uma espiada 👀</h2>
         <p class="sub">Arraste para o lado e conheça o app por dentro.</p>
       </div>
+      <!-- 🎬 Vídeo do app: entra ANTES das capturas porque movimento segura o olhar mais
+           que imagem parada, e é o único lugar do site onde dá para OUVIR o produto. -->
+      <div class="video-app reveal">
+        <div class="video-moldura">
+          <video id="videoApp" src="assets/img/xodo-video.mp4" poster="assets/img/xodo-video-capa.webp"
+                 autoplay loop muted playsinline preload="metadata"
+                 aria-label="Vídeo mostrando o app Xodó por dentro: diário do dia, carteirinha de vacinação, lembretes e relatório para o veterinário"></video>
+          <button class="video-som" id="videoSom" type="button" aria-label="Ativar o som do vídeo" aria-pressed="false">🔇</button>
+        </div>
+      </div>
+
       <div class="shots">
         <figure class="mini-phone reveal"><img src="assets/img/shot-1.webp" alt="Tela de início com checklist diário" loading="lazy" width="516" height="1118"><figcaption>Início</figcaption></figure>
         <figure class="mini-phone reveal"><img src="assets/img/shot-2.webp" alt="Carteirinha de vacinação digital" loading="lazy" width="516" height="1118"><figcaption>Carteirinha</figcaption></figure>
@@ -588,5 +614,21 @@
   })();
 </script>
   <script src="assets/mascotes.js" defer></script>
+<script>
+  /* Som do vídeo. Começa mudo (exigência dos navegadores para o autoplay) e o botão
+     alterna. Se o vídeo estiver pausado por economia de bateria, ativar o som também
+     dá play: quem toca no alto-falante espera ouvir alguma coisa. */
+  (function () {
+    var v = document.getElementById('videoApp'), b = document.getElementById('videoSom');
+    if (!v || !b) return;
+    b.addEventListener('click', function () {
+      v.muted = !v.muted;
+      b.textContent = v.muted ? '🔇' : '🔊';
+      b.setAttribute('aria-label', v.muted ? 'Ativar o som do vídeo' : 'Desativar o som do vídeo');
+      b.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
+      if (!v.muted && v.paused) v.play().catch(function () {});
+    });
+  })();
+</script>
 </body>
 </html>
