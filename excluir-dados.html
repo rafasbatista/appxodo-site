@@ -71,37 +71,54 @@
 
   <main>
     <div class="card">
-      <span class="upd">Última atualização: 19 de julho de 2026</span>
+      <span class="upd">Última atualização: 21 de novembro de 2026</span>
 
-      <p>Esta página explica como solicitar a exclusão dos seus dados do aplicativo <strong>Xodó</strong> (desenvolvido por <strong>Rafael Batista</strong>). Você pode excluir os dados a qualquer momento, do jeito que preferir.</p>
+      <p>Esta página explica como solicitar a exclusão da conta e dos dados do <strong>Xodó</strong>, desenvolvido por <strong>Rafael Batista</strong>.</p>
 
-      <h2>1. Dados guardados no seu aparelho</h2>
-      <p>A maior parte dos dados do Xodó (o cadastro do pet, carteirinha de vacinação, saúde, fotos, agenda e histórico) fica <strong>somente no seu aparelho</strong>. Para apagá-los, você tem duas formas, ambas imediatas:</p>
+      <h2>1. Excluir a conta do Xodó 1.2.0</h2>
+      <p>Na versão 1.2.0, siga os passos abaixo no aparelho em que a conta está conectada.</p>
+      <ol>
+        <li>Abra <strong>Ajustes → Sua conta → Excluir minha conta</strong>.</li>
+        <li>Leia o resumo da exclusão e solicite o código de confirmação.</li>
+        <li>Confirme com o código enviado ao e-mail cadastrado.</li>
+      </ol>
+      <p>A ação remove a conta, a carteira de Patinhas e os dados dos pets do titular na nuvem. Também remove do servidor as fotos dos pets do titular e as imagens enviadas por essa conta, inclusive versões anteriores. O aparelho que confirma a exclusão limpa os registros locais, as fotos internas e os lembretes. Dados de outros titulares continuam com eles, sem o vínculo de autoria com a conta excluída. Cópias exportadas e dados em outros aparelhos não são apagados à distância.</p>
+      <div class="note"><strong>Para encerrar cobranças recorrentes, gerencie a renovação na loja.</strong> Acesse as assinaturas na <a href="https://apps.apple.com/account/subscriptions">App Store</a> ou no <a href="https://play.google.com/store/account/subscriptions">Google Play</a>. A solicitação de exclusão da conta pode ser feita mesmo com uma assinatura ativa.</div>
+
+      <h2>2. Pedir exclusão sem entrar no aplicativo</h2>
+      <p>Você pode solicitar a exclusão da conta e dos dados associados, inclusive se não conseguir abrir o app:</p>
+      <ol>
+        <li>Envie um e-mail para <a href="mailto:xodoapp@rafasbatista.app.br?subject=Excluir%20conta%20Xod%C3%B3">xodoapp@rafasbatista.app.br</a> a partir do endereço cadastrado no Xodó.</li>
+        <li>Use o assunto <strong>Excluir conta Xodó</strong> e informe que deseja excluir a conta e os dados associados. Não envie senha ou dados de cartão.</li>
+        <li>A equipe confirma a titularidade e atende o pedido em <strong>até 15 dias</strong>. Se você perdeu o acesso ao e-mail, explique isso à equipe para receber orientação sobre a confirmação de titularidade.</li>
+      </ol>
+      <p>Para pedir apenas a exclusão de determinados dados, sem excluir a conta, identifique os registros no pedido. Informaremos quando a remoção impedir o funcionamento de algum recurso.</p>
+
+      <h2>3. Dados guardados no seu aparelho e versões anteriores</h2>
+      <p>Fotos de rótulos, exames e outros anexos ficam no aparelho. Na Família Xodó 1.2.0, a foto principal do pet compartilhado também fica no servidor e é removida conforme o fluxo de exclusão acima. Nas versões anteriores à 1.2.0, os registros do pet também são locais. Para apagar os dados locais:</p>
       <ul>
         <li>No app, abra <strong>Ajustes → "Apagar todos os dados"</strong> e confirme; ou</li>
-        <li><strong>Desinstale o app</strong>, o que remove tudo que estava guardado localmente.</li>
+        <li>Use a opção de apagar os dados do aplicativo no sistema ou desinstale o app. Arquivos exportados e cópias externas precisam ser apagados separadamente.</li>
       </ul>
 
-      <h2>2. Cadastro guardado na nuvem</h2>
-      <p>Se você preencher o cadastro (que é opcional: dá pra pular e usar o app normalmente), o Xodó registra <strong>nome, e-mail e (se você informar) celular</strong> em nosso banco de dados (Google Firebase), para manter seu registro e, caso você tenha autorizado, enviar dicas e novidades. Para excluir esse cadastro:</p>
-      <ol>
-        <li>Envie um e-mail para <a href="mailto:xodoapp@rafasbatista.app.br">xodoapp@rafasbatista.app.br</a> <strong>a partir do e-mail que você cadastrou</strong> no app.</li>
-        <li>Use o assunto <strong>"Excluir cadastro"</strong>.</li>
-        <li>Confirmamos e concluímos a exclusão em <strong>até 15 dias</strong>.</li>
-      </ol>
+      <p>O cadastro de contato opcional das versões anteriores, com nome, e-mail, celular e preferência de comunicação no Firebase, também pode ser excluído pelo e-mail acima, com o assunto <strong>Excluir cadastro</strong>, em até 15 dias.</p>
 
-      <h2>3. O que é excluído e o que é mantido</h2>
+      <h2>4. O que é excluído e o que é mantido</h2>
       <div class="tbl-wrap">
         <table>
           <tr><th>Dado</th><th>O que acontece</th></tr>
-          <tr><td>Nome, e-mail, celular e preferência de comunicação</td><td><strong>Excluídos</strong> por completo do nosso banco, sem retenção adicional.</td></tr>
-          <tr><td>Dados do pet, saúde, fotos, agenda e histórico</td><td>Ficam apenas no aparelho; são <strong>excluídos</strong> por você em Ajustes ou ao desinstalar o app. Não temos cópia deles.</td></tr>
+          <tr><td>Conta, carteira e pets do titular na nuvem</td><td>Removidos ao concluir a exclusão da conta. Participações familiares e autoria são tratadas sem apagar os dados de outros titulares.</td></tr>
+          <tr><td>Cadastro de contato no Firebase e identificadores de cliente no RevenueCat</td><td>O pedido segue para uma fila de atendimento restrita com prazo de até 15 dias. A equipe confere o cadastro e as indicações de ONGs atribuídas à conta. O e-mail e os identificadores usados na fila são apagados ao concluir o pedido.</td></tr>
+          <tr><td>Fotos, anexos e registros locais</td><td>Limpos no aparelho que confirma a exclusão. Cópias exportadas ou em outros aparelhos precisam ser removidas separadamente.</td></tr>
+          <tr><td>Push e lembretes remotos</td><td>Perfil, identificadores e histórico da conta são removidos. Avisos já entregues podem permanecer no dispositivo. Fora da exclusão, o histórico mínimo de entregas de cuidados dura aproximadamente 30 dias.</td></tr>
+          <tr><td>Proteção contra crédito duplicado de compra</td><td>Marcador criptográfico da transação, produto e datas são mantidos por 12 meses após a exclusão. Sem nome, e-mail, pet ou recibo. É pseudonimizado, sem garantia de anonimato. Eventos financeiros em conferência podem permanecer até sua conclusão.</td></tr>
+          <tr><td>Comprovante de limpeza após falha de conexão</td><td>Comprovante aleatório, sem nome, e-mail ou identificador de conta, mantido por até 12 meses para permitir retomar a limpeza local.</td></tr>
         </table>
       </div>
       <p class="tbl-hint">↔ Deslize a tabela para o lado para ver tudo.</p>
-      <div class="note">Não guardamos senha (o app não usa login) nem dados de pagamento (as assinaturas são processadas pela loja de aplicativos do seu aparelho). Após a exclusão, não mantemos backups do seu cadastro.</div>
+      <div class="note">Os pagamentos são processados pela Apple ou pelo Google. O Xodó não recebe dados do seu cartão. O histórico de compras mantido pela loja segue as regras dela.</div>
 
-      <h2>4. Dúvidas</h2>
+      <h2>5. Dúvidas</h2>
       <p>Fale com a gente pelo e-mail <a href="mailto:xodoapp@rafasbatista.app.br">xodoapp@rafasbatista.app.br</a>. Veja também a nossa <a href="https://xodoapp.rafasbatista.app.br/privacidade.html">Política de Privacidade</a>.</p>
     </div>
   </main>

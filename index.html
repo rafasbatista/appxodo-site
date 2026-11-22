@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xodó: O guia de bolso do seu pet 🐾</title>
-<meta name="description" content="Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Tudo do seu cão ou gato num app só, simples, offline e cheio de carinho.">
+<meta name="description" content="Organize vacinas, lembretes e cuidados de cães e gatos. Conheça a Família Xodó, as Patinhas e as novidades da versão 1.2.0.">
 <!-- Faixa nativa do Safari no iPhone/iPad oferecendo baixar (ou abrir) o app -->
 <meta name="apple-itunes-app" content="app-id=6795604960">
 <meta property="og:title" content="Xodó: O guia de bolso do seu pet 🐾">
-<meta property="og:description" content="Carteirinha de vacinação, lembretes e cuidados diários do seu cão ou gato. Simples, offline e cheio de carinho.">
+<meta property="og:description" content="Vacinas, agenda e cuidados diários. Conheça o compartilhamento da Família Xodó e as Patinhas da versão 1.2.0.">
 <meta property="og:url" content="https://xodoapp.rafasbatista.app.br">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/img/logo.webp">
@@ -22,7 +22,7 @@
   "name": "Xodó: Vacinas e Cuidados Pet",
   "operatingSystem": "iOS, Android",
   "applicationCategory": "LifestyleApplication",
-  "description": "Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Tudo do seu cão ou gato num app só, simples, offline e cheio de carinho.",
+  "description": "Carteirinha de vacinação, agenda e cuidados de cães e gatos. A versão 1.2.0 traz a Família Xodó e a personalização com Patinhas.",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
   "inLanguage": "pt-BR",
   "url": "https://xodoapp.rafasbatista.app.br"
@@ -33,12 +33,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"O Xodó é grátis?","acceptedAnswer":{"@type":"Answer","text":"Sim. Carteirinha de vacinação, lembrete de vacina, checklist diário, agenda, mapa e muito mais são gratuitos. O Xodó Pro tira os limites: pets ilimitados, todos os lembretes, certidão, exportação limpa e sem anúncios."}},
-    {"@type":"Question","name":"Funciona sem internet?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Xodó funciona offline: carteirinha, lembretes, agenda e saúde ficam no seu aparelho. Só o mapa de clínicas e pet shops precisa de internet."}},
-    {"@type":"Question","name":"Pra onde vão os dados do meu pet?","acceptedAnswer":{"@type":"Answer","text":"Ficam no seu aparelho. Não temos servidor que armazene os dados do seu pet. Só o seu cadastro (nome e e-mail), que é opcional, vai para a nuvem."}},
-    {"@type":"Question","name":"Serve pra gato e cachorro?","acceptedAnswer":{"@type":"Answer","text":"Sim, o Xodó foi feito para cães e gatos, com protocolos brasileiros de vacinação para as duas espécies."}},
-    {"@type":"Question","name":"Preciso criar conta?","acceptedAnswer":{"@type":"Answer","text":"Não. Dá pra pular o cadastro e usar o app inteiro normalmente. Não existe senha nem login."}},
-    {"@type":"Question","name":"Como apago meus dados?","acceptedAnswer":{"@type":"Answer","text":"No app, em Ajustes, use Apagar todos os dados. Os detalhes estão na página de exclusão de dados do site."}}
+    {"@type":"Question","name":"O Xodó é grátis?","acceptedAnswer":{"@type":"Answer","text":"O download é gratuito. Carteirinha, lembretes de vacina, checklist, agenda e mapa fazem parte da versão gratuita. O Xodó Pro acrescenta recursos como mais pets, exportação completa e uma experiência sem anúncios. Os pacotes de Patinhas são compras opcionais."}},
+    {"@type":"Question","name":"Funciona sem internet?","acceptedAnswer":{"@type":"Answer","text":"Depois da entrada, os registros e lembretes guardados no aparelho podem ser usados offline. A confirmação do e-mail, as compras, a sincronização da Família Xodó, os lembretes remotos e o mapa dependem de internet."}},
+    {"@type":"Question","name":"Pra onde vão os dados do meu pet?","acceptedAnswer":{"@type":"Answer","text":"Os registros ficam no seu aparelho. Na Família Xodó, os dados e a foto principal dos pets escolhidos são sincronizados apenas com tutores autorizados. As demais fotos e anexos continuam no aparelho em que foram salvos. Veja a Política de Privacidade."}},
+    {"@type":"Question","name":"Serve pra gato e cachorro?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Xodó foi feito para cães e gatos, com referências brasileiras de vacinação para as duas espécies."}},
+    {"@type":"Question","name":"Preciso criar conta?","acceptedAnswer":{"@type":"Answer","text":"Na 1.2.0, entre com seu e-mail e confirme o código recebido. Nas versões anteriores à 1.2.0, o cadastro de contato é opcional."}},
+    {"@type":"Question","name":"Como funciona a Família Xodó?","acceptedAnswer":{"@type":"Answer","text":"Escolha os pets e convide outro tutor pelo e-mail da conta Xodó. Cada participante precisa de Pro anual ou vitalício. Você pode gerenciar os acessos no app."}},
+    {"@type":"Question","name":"Como apago meus dados?","acceptedAnswer":{"@type":"Answer","text":"Na 1.2.0, abra Ajustes, Sua conta, Excluir minha conta e confirme pelo e-mail. Se você ainda usa uma versão anterior, use Apagar todos os dados para os registros locais. Você também pode solicitar a exclusão fora do app pela página de exclusão de dados."}}
   ]
 }
 </script>
@@ -102,6 +103,7 @@
   .hero-txt h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:12px;border-radius:8px;
     background:var(--gold);opacity:.55;z-index:-1;}
   .hero-txt .slogan{margin-top:14px;font-size:19px;font-weight:600;opacity:.96;max-width:520px;}
+  .hero-txt .release-note{margin-top:12px;font-size:14px;font-weight:700;}
   /* selos oficiais das lojas — só os selos, mesma altura, sem caixa em volta */
   /* Aviso que só aparece dentro do navegador embutido do Instagram/Facebook no iPhone,
      onde a ida pra App Store é bloqueada pelo app e o toque não faz nada. Ver o script. */
@@ -355,7 +357,7 @@
     <div class="wrap hero-grid">
       <div class="hero-txt">
         <h1>Todo o cuidado do seu <span class="hl">xodó</span> num lugar só</h1>
-        <p class="slogan">Carteirinha de vacinação, lembretes, agenda, saúde e mapa pet friendly. Simples, offline e cheio de carinho, do jeitinho que seu cão ou gato merece.</p>
+        <p class="slogan">Vacinas, agenda e cuidados diários para cães e gatos. Na versão 1.2.0, compartilhe a rotina com quem cuida junto e personalize a foto do seu pet com Patinhas.</p>
         <div class="badges">
           <!-- ⚠️ SEM target="_blank" de propósito: WKWebView (navegador embutido de app)
                ignora link de nova aba e o botão nao faz nada. Não recolocar. -->
@@ -366,16 +368,17 @@
             <img src="assets/img/googleplay-badge.png" alt="Disponível no Google Play" width="646" height="192">
           </a>
         </div>
+        <p class="release-note">A disponibilidade da versão 1.2.0 depende da liberação em cada loja.</p>
         <p class="aviso-iab" hidden>⚠️ Pelo Instagram, o botão da App Store não abre: ele bloqueia a ida pra loja. Toque em <b>⋯</b> no topo e escolha <b>Abrir no navegador</b>.</p>
       </div>
       <div class="hero-phone">
-        <div class="phone"><img src="assets/img/shot-2.webp" alt="Tela inicial do Xodó com o diário e o checklist diário do pet" width="516" height="1118"></div>
-        <div class="phone ghost" aria-hidden="true"><img src="assets/img/shot-1.webp" alt="" width="516" height="1118"></div>
+        <div class="phone"><img src="assets/img/xodo-120-inicio.webp" alt="Início da versão 1.2.0, com a foto do pet, os cuidados do dia e as Patinhas" width="516" height="1121"></div>
+        <div class="phone ghost" aria-hidden="true"><img src="assets/img/xodo-120-carteirinha.webp" alt="" width="516" height="1121"></div>
       </div>
     </div>
     <div class="wrap hero-mini">
-      <span><span class="em">📵</span>Funciona offline</span>
-      <span><span class="em">🔒</span>Dados no seu aparelho</span>
+      <span><span class="em">📵</span>Cuidados locais offline</span>
+      <span><span class="em">🔒</span>Compartilhamento por convite</span>
       <span><span class="em">🇧🇷</span>Protocolos brasileiros</span>
       <span><span class="em">🩺</span>Testado com tutores e veterinária</span>
     </div>
@@ -398,7 +401,7 @@
         <img class="mascote" src="assets/mascotes/dog-apontando.webp" alt="" aria-hidden="true" width="715" height="800">
         <h2 class="sec">Tudo do seu pet, num lugar só</h2>
       </div>
-      <p class="sec-sub">Feito pra quem ama e cuida de perto. Sem cadastro obrigatório, sem complicação.</p>
+      <p class="sec-sub">Veja o que você pode fazer no Xodó e conheça as novidades da 1.2.0.</p>
       <div class="feats">
         <div class="feat reveal"><div class="ic">💉</div><h3>Carteirinha de vacinação</h3><p>Vacinas, vermífugos e antiparasitários com cálculo automático da próxima dose pelo calendário brasileiro. Verde = em dia, vermelho = atrasou.</p></div>
         <div class="feat reveal"><div class="ic">🔔</div><h3>Lembretes que não deixam esquecer</h3><p>Vacina, banho, remédio com horário, troca de ração, cio e aniversário, tudo com aviso no seu celular.</p></div>
@@ -409,6 +412,9 @@
         <div class="feat reveal"><div class="ic">🏆</div><h3>Conquistas</h3><p>Medalhas por cuidar direitinho: sequências de dias, vacinas em dia, passeios registrados. Cuidado que vira orgulho.</p></div>
         <div class="feat reveal"><div class="ic">💚</div><h3>Causa animal</h3><p>Espaço dedicado a ONGs de resgate, com Instagram, site e PIX de cada uma. Você pode até indicar uma ONG da sua região.</p></div>
         <div class="feat reveal"><div class="ic">🖨️</div><h3>Carteirinha exportável</h3><p>Leve a carteirinha em PDF ou imagem pra consulta, hotel ou viagem. No Pro, sai limpinha, pronta pra imprimir.</p></div>
+        <div class="feat reveal"><div class="ic">💚</div><h3>Família Xodó</h3><p>Na 1.2.0, convide outro tutor para cuidar dos mesmos pets. Cada participante precisa de Pro anual ou vitalício.</p></div>
+        <div class="feat reveal"><div class="ic">🐾</div><h3>Patinhas e escudos</h3><p>Na 1.2.0, os cuidados rendem Patinhas para trocar por itens. Use escudos para proteger a sequência.</p></div>
+        <div class="feat reveal"><div class="ic">🖼️</div><h3>Molduras e ícones</h3><p>Na 1.2.0, personalize a foto do pet e compartilhe a imagem quando quiser.</p></div>
       </div>
     </div>
   </section>
@@ -418,7 +424,7 @@
       <div class="center">
         <span class="kicker">Telas</span>
         <h2 class="sec">Dá uma espiada 👀</h2>
-        <p class="sub">Arraste para o lado e conheça o app por dentro.</p>
+        <p class="sub">Deslize para ver as telas da versão 1.2.0.</p>
       </div>
       <!-- 🎬 Vídeo do app: entra ANTES das capturas porque movimento segura o olhar mais
            que imagem parada, e é o único lugar do site onde dá para OUVIR o produto. -->
@@ -432,12 +438,14 @@
       </div>
 
       <div class="shots">
-        <figure class="mini-phone reveal"><img src="assets/img/shot-1.webp" alt="Carteirinha de vacinação com as vacinas em dia e a atrasada em vermelho" loading="lazy" width="516" height="1118"><figcaption>Carteirinha</figcaption></figure>
-        <figure class="mini-phone reveal"><img src="assets/img/shot-2.webp" alt="Tela de início com o diário do dia e o checklist de cuidados" loading="lazy" width="516" height="1118"><figcaption>Diário</figcaption></figure>
-        <figure class="mini-phone reveal"><img src="assets/img/shot-3.webp" alt="Lembrete de vacina chegando no celular, com a agenda do mês" loading="lazy" width="516" height="1118"><figcaption>Lembretes</figcaption></figure>
-        <figure class="mini-phone reveal"><img src="assets/img/shot-4.webp" alt="Relatório do veterinário em PDF, com peso, vacinas e consultas" loading="lazy" width="516" height="1118"><figcaption>Relatório do vet</figcaption></figure>
-        <figure class="mini-phone reveal"><img src="assets/img/shot-5.webp" alt="Central de saúde do pet com passeios, lembretes e medicamentos" loading="lazy" width="516" height="1118"><figcaption>Saúde</figcaption></figure>
-        <figure class="mini-phone reveal"><img src="assets/img/shot-6.webp" alt="Mapa de clínicas veterinárias e pet shops perto de você" loading="lazy" width="516" height="1118"><figcaption>Mapa</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-inicio.webp" alt="Foto do pet, Patinhas e progresso dos cuidados de hoje" loading="lazy" width="516" height="1121"><figcaption>Início</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-carteirinha.webp" alt="Status das vacinas e botão para exportar a carteirinha" loading="lazy" width="516" height="1121"><figcaption>Carteirinha</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-agenda.webp" alt="Calendário com compromissos e cuidados do pet" loading="lazy" width="516" height="1121"><figcaption>Agenda</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-familia.webp" alt="Tela da Família Xodó com as opções de convidar tutor e ver convites" loading="lazy" width="516" height="1121"><figcaption>Família Xodó</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-saude.webp" alt="Passeios, lembretes recorrentes e medicamentos" loading="lazy" width="516" height="1121"><figcaption>Saúde</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-patinhas.webp" alt="Saldo de Patinhas, próxima medalha e escudos" loading="lazy" width="516" height="1121"><figcaption>Patinhas</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-molduras.webp" alt="Foto do pet com a moldura Peixinhos e catálogo de molduras" loading="lazy" width="516" height="1121"><figcaption>Molduras</figcaption></figure>
+        <figure class="mini-phone reveal"><img src="assets/img/xodo-120-conquistas.webp" alt="Progresso e medalhas dos cuidados com o pet" loading="lazy" width="516" height="1121"><figcaption>Conquistas</figcaption></figure>
       </div>
     </div>
   </section>
@@ -463,7 +471,7 @@
           <span class="plan">Mensal</span>
           <span class="plan">Anual <b>mais popular</b></span>
           <span class="plan">Vitalício <b>pague uma vez</b></span>
-          <span class="obs">Assinatura direto no app, cancela quando quiser.</span>
+          <span class="obs">Mensal e anual têm renovação automática. Vitalício é compra única. Na 1.2.0, Família Xodó está incluída no anual e no vitalício.</span>
         </div>
       </div>
     </div>
@@ -472,9 +480,9 @@
   <section style="padding-top:0;">
     <div class="wrap">
       <div class="trust">
-        <div class="tcard reveal"><span class="em">🔒</span><span><b>Seus dados ficam com você</b><span>Tudo do pet fica no seu aparelho. Sem servidor espiando.</span></span></div>
-        <div class="tcard reveal"><span class="em">📵</span><span><b>Funciona offline</b><span>No sítio, na praia ou no rolê: o Xodó vai junto.</span></span></div>
-        <div class="tcard reveal"><span class="em">🙅</span><span><b>Sem login obrigatório</b><span>Abre e usa. Cadastro só se você quiser.</span></span></div>
+        <div class="tcard reveal"><span class="em">🔒</span><span><b>Você escolhe com quem compartilha</b><span>Na 1.2.0, a Família sincroniza a foto principal e os registros dos pets que você escolher.</span></span></div>
+        <div class="tcard reveal"><span class="em">📵</span><span><b>Cuidados locais offline</b><span>Depois de entrar, acesse os registros guardados no aparelho mesmo sem conexão.</span></span></div>
+        <div class="tcard reveal"><span class="em">✉️</span><span><b>Entrada por e-mail</b><span>Na 1.2.0, um código enviado ao e-mail confirma o acesso à sua conta.</span></span></div>
         <div class="tcard reveal"><span class="em">♿</span><span><b>Acessível de verdade</b><span>Leitor de tela, contraste AA e texto maior.</span></span></div>
       </div>
     </div>
@@ -489,12 +497,13 @@
       </div>
       <p class="sec-sub">As respostas rápidas pras dúvidas que todo tutor tem.</p>
       <div class="faq">
-        <details class="reveal"><summary>💚 O Xodó é grátis?</summary><div class="a">Sim. Carteirinha de vacinação, lembrete de vacina, checklist diário, agenda, mapa e muito mais são gratuitos de verdade. O Xodó Pro tira os limites: pets ilimitados, todos os lembretes, certidão, exportação limpa e sem anúncios.</div></details>
-        <details class="reveal"><summary>📵 Funciona sem internet?</summary><div class="a">Sim. O Xodó funciona offline: carteirinha, lembretes, agenda e saúde ficam no seu aparelho e não dependem de conexão. Só o mapa de clínicas e pet shops precisa de internet.</div></details>
-        <details class="reveal"><summary>🔒 Pra onde vão os dados do meu pet?</summary><div class="a">Ficam no seu aparelho. Não temos servidor que armazene os dados do seu pet. Só o seu cadastro (nome e e-mail), que é opcional, vai para a nuvem. Detalhes na <a href="privacidade.html">Política de Privacidade</a>.</div></details>
-        <details class="reveal"><summary>🐕🐈 Serve pra gato e cachorro?</summary><div class="a">Sim, o Xodó foi feito para cães e gatos, com protocolos brasileiros de vacinação para as duas espécies e raças das duas turmas.</div></details>
-        <details class="reveal"><summary>🙅 Preciso criar conta?</summary><div class="a">Não. Dá pra pular o cadastro e usar o app inteiro normalmente. Não existe senha nem login.</div></details>
-        <details class="reveal"><summary>🗑️ Como apago meus dados?</summary><div class="a">No app, em Ajustes, use "Apagar todos os dados". O passo a passo completo está na página de <a href="excluir-dados.html">exclusão de dados</a>.</div></details>
+        <details class="reveal"><summary>💚 O Xodó é grátis?</summary><div class="a">O download é gratuito. Carteirinha, lembretes de vacina, checklist, agenda e mapa fazem parte da versão gratuita. O Xodó Pro acrescenta recursos como mais pets, exportação completa e uma experiência sem anúncios. Os pacotes de Patinhas são compras opcionais.</div></details>
+        <details class="reveal"><summary>📵 Funciona sem internet?</summary><div class="a">Depois da entrada, os registros e lembretes guardados no aparelho podem ser usados offline. A confirmação do e-mail, as compras, a sincronização da Família Xodó, os lembretes remotos e o mapa dependem de internet.</div></details>
+        <details class="reveal"><summary>🔒 Pra onde vão os dados do meu pet?</summary><div class="a">Os registros ficam no seu aparelho. Na Família Xodó, os dados e a foto principal dos pets escolhidos são sincronizados apenas com tutores autorizados. As demais fotos e anexos continuam no aparelho em que foram salvos. Veja a <a href="privacidade.html">Política de Privacidade</a>.</div></details>
+        <details class="reveal"><summary>🐕🐈 Serve pra gato e cachorro?</summary><div class="a">Sim. O Xodó foi feito para cães e gatos, com referências brasileiras de vacinação para as duas espécies.</div></details>
+        <details class="reveal"><summary>✉️ Preciso criar conta?</summary><div class="a">Na 1.2.0, entre com seu e-mail e confirme o código recebido. Nas versões anteriores à 1.2.0, o cadastro de contato é opcional.</div></details>
+        <details class="reveal"><summary>🐾 Como funciona a Família Xodó?</summary><div class="a">Escolha os pets e convide outro tutor pelo e-mail da conta Xodó. Cada participante precisa de Pro anual ou vitalício. Você pode gerenciar os acessos no app.</div></details>
+        <details class="reveal"><summary>🗑️ Como apago meus dados?</summary><div class="a">Na 1.2.0, abra Ajustes, Sua conta, Excluir minha conta e confirme pelo e-mail. Se você ainda usa uma versão anterior, use Apagar todos os dados para os registros locais. Você também pode solicitar a exclusão fora do app pela página de <a href="excluir-dados.html">exclusão de dados</a>.</div></details>
       </div>
     </div>
   </section>

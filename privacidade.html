@@ -75,86 +75,106 @@
 
   <main>
     <div class="card">
-      <span class="upd">Última atualização: 11 de agosto de 2026</span>
+      <span class="upd">Última atualização: 21 de novembro de 2026</span>
 
-      <p>O <strong>Xodó</strong> ("app", "nós") é um aplicativo para tutores de cães e gatos que reúne carteirinha de vacinação, lembretes e cuidados diários. Esta política explica quais dados o app trata, como e por quê. Ao usar o Xodó, você concorda com as práticas aqui descritas.</p>
+      <div class="note">Esta política descreve a versão 1.2.0. Conta, carteira, Família Xodó e lembretes remotos se aplicam conforme os recursos disponíveis na versão instalada. Nas versões anteriores, o cadastro de contato é opcional e os registros do pet permanecem no aparelho.</div>
+
+      <p>O <strong>Xodó</strong> ("app", "nós") é um aplicativo para tutores de cães e gatos. Esta política explica os dados tratados, as finalidades e os controles à sua disposição. Nas funções que dependem de consentimento, sua escolha é solicitada separadamente.</p>
       <p style="margin-top:10px;">
         <strong>Responsável pelo tratamento (controlador):</strong> Rafael Batista<br>
         <strong>Site oficial:</strong> <a href="https://xodoapp.rafasbatista.app.br">xodoapp.rafasbatista.app.br</a><br>
-        <strong>Contato / Encarregado (DPO):</strong> <a href="mailto:xodoapp@rafasbatista.app.br">xodoapp@rafasbatista.app.br</a>
+        <strong>Contato de privacidade:</strong> <a href="mailto:xodoapp@rafasbatista.app.br">xodoapp@rafasbatista.app.br</a>
       </p>
 
       <h2>1. Resumo rápido</h2>
       <ul class="lead">
-        <li>🔒 <strong>Os dados do seu pet ficam no seu aparelho.</strong> O Xodó funciona <strong>offline</strong> e guarda a carteirinha, a saúde e as fotos localmente. Não temos servidor que armazene os dados do seu pet.</li>
-        <li>📇 <strong>Só o seu cadastro vai para a nuvem:</strong> nome, e-mail e celular (se informado) são guardados em nosso banco de dados (Google Firebase, servidor no Brasil) para manter seu registro e, <strong>se você autorizar</strong>, enviar dicas e novidades.</li>
+        <li>🔒 <strong>Os registros do pet ficam no aparelho e podem ser sincronizados quando você usa a Família Xodó.</strong> A foto principal do pet compartilhado também é sincronizada com os tutores autorizados. Outras fotos e anexos continuam locais. A conta, a carteira e os lembretes remotos usam os dados descritos nesta política.</li>
+        <li>📇 <strong>A versão 1.2.0 usa conta com e-mail confirmado.</strong> Comunicações de dicas e novidades continuam dependendo da sua autorização. O cadastro de contato existente no Firebase é separado da autenticação no Supabase.</li>
         <li>🚫 <strong>Não vendemos seus dados</strong> e não os usamos para nada além do descrito aqui.</li>
-        <li>🗑️ <strong>Você apaga tudo:</strong> os dados do aparelho, desinstalando o app ou em Ajustes → "Apagar todos os dados"; o cadastro na nuvem, pedindo pelo e-mail de contato.</li>
+        <li>🗑️ <strong>Você pode excluir sua conta e solicitar a exclusão dos dados.</strong> Veja os passos e as retenções técnicas em <a href="excluir-dados.html">Exclusão de dados</a>. Desinstalar o app, sozinho, não exclui a conta na nuvem nem cancela assinaturas.</li>
       </ul>
 
       <h2>2. Dados que o app trata</h2>
       <h3>2.1 Cadastro (enviado ao nosso banco de dados)</h3>
       <ul>
-        <li><strong>Nome, e-mail e, opcionalmente, celular</strong>, informados por você no cadastro, que é <strong>opcional</strong>: dá pra pular e usar o app normalmente, ou preencher depois em "Sua conta". Não há senha nem login: o app não tem conta.</li>
+        <li><strong>Nome, e-mail e, opcionalmente, celular</strong>, informados por você no cadastro de contato. Nas versões anteriores à 1.2.0, esse cadastro é opcional. Na 1.2.0, o Supabase confirma seu e-mail com um código temporário enviado pelo Resend. O Supabase também mantém os identificadores da conta e do aparelho autorizado.</li>
         <li>Junto vão a <strong>plataforma</strong> (Android/iOS), a <strong>versão do app</strong> e a sua escolha sobre <strong>receber dicas e novidades</strong> (opt-in).</li>
         <li>Finalidade: manter o registro de quem usa o app, dar suporte e, <strong>apenas com o seu consentimento</strong>, enviar comunicações. Armazenado no <strong>Google Firebase (Firestore)</strong>, em servidor localizado no Brasil (São Paulo).</li>
       </ul>
-      <h3>2.2 Dados do pet (ficam no seu aparelho)</h3>
+      <h3>2.2 Dados do pet e compartilhamento familiar</h3>
       <ul>
         <li><strong>Dados do pet:</strong> nome, espécie, raça, data de nascimento, sexo, peso e rotina.</li>
         <li><strong>Dados de saúde do pet:</strong> vacinas, vermífugos, consultas, exames, medicamentos, banhos e registros de passeios.</li>
-        <li><strong>Fotos:</strong> foto do pet, do rótulo de vacinas e de exames, escolhidas por você e guardadas localmente.</li>
+        <li><strong>Fotos:</strong> imagens escolhidas por você e guardadas no aparelho. Na Família Xodó, a foto principal do pet compartilhado também é guardada em armazenamento privado e disponibilizada aos tutores autorizados. Fotos de rótulos de vacinas, exames e outros anexos permanecem locais.</li>
       </ul>
-      <div class="note">Os dados do pet, de saúde e as fotos são gravados <strong>somente no armazenamento local do aparelho</strong>. Não são enviados para nós nem para terceiros, exceto nos casos da seção 3.</div>
+      <div class="note">Os registros continuam disponíveis no aparelho. Na Família Xodó, os dados estruturados dos pets escolhidos, incluindo cuidados, vacinas, consultas, exames, medicamentos e passeios, e a foto principal do pet são sincronizados pelo Supabase para os tutores autorizados. Outras fotos e anexos não entram nessa sincronização e permanecem no aparelho de quem os salvou.</div>
+      <p>A foto principal compartilhada fica em armazenamento privado, com acesso autorizado pela conta, pelo aparelho e pelo papel na família. O aplicativo guarda uma cópia local para exibição. Tutores com permissão de edição podem substituir a imagem. São aceitos arquivos JPEG, PNG e WebP de até 10 MB.</p>
+      <p>O convite familiar é destinado a uma conta Xodó existente, identificada pelo e-mail confirmado. O administrador escolhe os pets e pode revogar o acesso. Os participantes acessam os dados conforme o papel recebido. Não há convite por link público.</p>
+
+      <h3>2.2.1 Notificações e lembretes remotos</h3>
+      <p>Com sua permissão de notificações e a categoria correspondente ativada, o Supabase guarda o identificador de push associado à conta e ao aparelho autorizado. Expo, APNs da Apple e FCM do Google entregam os avisos. Convites usam mensagem genérica, sem nome de tutor, pet ou e-mail; a lista de convites exige autenticação.</p>
+      <p>Para lembretes de cuidados, enviamos o fuso do aparelho, a última utilização do Xodó, identificadores e nomes dos pets e um indicador de cuidado registrado no dia. O serviço usa esses dados para decidir os avisos das 9h e 20h, no horário do aparelho, enquanto faltar registro, e personalizar lembretes de retorno. Registros familiares autorizados ajudam a evitar avisos desnecessários. O provedor de push recebe o token, a mensagem, que pode incluir o nome do pet, e os identificadores necessários para abrir o cuidado na conta correta.</p>
+      <p>Você pode desligar cada categoria em Ajustes, Notificações do app, ou revogar a permissão no sistema. Sair da conta desativa o aparelho para novos envios quando há conexão. A troca de aparelho autorizado bloqueia novos envios ao anterior. Avisos já entregues podem permanecer no dispositivo. Lembretes de vacinas, medicamentos, agenda e outros cuidados cadastrados continuam agendados localmente.</p>
+
+      <h3>2.2.2 Conta, Patinhas e compras</h3>
+      <p>O Supabase mantém identificadores de conta, saldo de Patinhas, compras e itens vinculados ao tutor e ao pet. O RevenueCat e as lojas fornecem o status e os identificadores necessários para validar assinaturas e compras e evitar créditos duplicados. Não recebemos os dados do seu cartão. Patinhas são itens virtuais do aplicativo.</p>
 
       <h3>2.3 Localização</h3>
       <ul>
-        <li>Ao abrir o <strong>mapa</strong> de clínicas, pet shops e locais pet friendly, o app pede permissão e usa a <strong>localização do aparelho</strong> para buscar lugares por perto. A coordenada é enviada ao provedor do mapa com precisão suficiente para localizar estabelecimentos próximos de você.</li>
-        <li>A localização é usada <strong>apenas naquele momento</strong> para a busca e <strong>não é armazenada</strong> por nós.</li>
-        <li>Você pode negar ou revogar essa permissão a qualquer momento nas configurações do sistema. O resto do app continua funcionando normalmente sem ela.</li>
+        <li>Ao abrir o <strong>mapa</strong>, o app solicita a localização do aparelho. A precisão depende da plataforma e da permissão concedida. Quando a localização do aparelho está indisponível, inclusive após negar a permissão, o app tenta estimar a região pelo endereço IP com ipwho.is, GeoJS ou ipapi.co. Esses serviços recebem o IP da conexão.</li>
+        <li>A coordenada e a categoria são usadas para buscar locais no Google Places por meio do serviço do Xodó, ou no OpenStreetMap. O app pode reutilizar a posição em memória por até cinco minutos. A posição fica fora do histórico da conta e da Família Xodó.</li>
+        <li>Você pode rever a permissão nas configurações do sistema. Para evitar a consulta de localização pelo aparelho ou IP para essa finalidade, use os demais recursos do Xodó sem abrir o mapa.</li>
       </ul>
 
       <h3>2.4 Dados coletados automaticamente (quando aplicável)</h3>
       <ul>
         <li><strong>Anúncios (Google AdMob):</strong> se o app exibir anúncios, o AdMob pode coletar identificadores de publicidade e dados do dispositivo para exibir e medir anúncios.</li>
         <li><strong>Consentimento de anúncios:</strong> se você estiver no <strong>Espaço Econômico Europeu ou no Reino Unido</strong>, o app exibe um formulário de consentimento (plataforma de mensagens do Google) <strong>antes</strong> de solicitar qualquer anúncio, e respeita a sua escolha. Você pode rever essa decisão quando quiser em <strong>Ajustes → Privacidade dos anúncios</strong>. No <strong>iOS</strong>, o app também pede a autorização de rastreamento do sistema (App Tracking Transparency) antes de anúncios personalizados.</li>
-        <li><strong>Medição de anúncios (Meta):</strong> quando divulgamos o Xodó no Instagram e no Facebook, o SDK da Meta registra a instalação do app e marcos de uso (cadastro do primeiro pet, abertura da tela de assinatura e conclusão da compra) para sabermos qual anúncio funcionou. Isso <strong>não inclui</strong> os dados do seu pet, o seu cadastro nem o conteúdo que você guarda no app. No <strong>iOS</strong>, essa medição só usa o identificador de publicidade se você autorizar o rastreamento na janela do sistema; sem a autorização, a medição fica anônima e agregada.</li>
+        <li><strong>Medição de anúncios (Meta):</strong> quando habilitada, registra instalações e ações como cadastrar o primeiro pet, abrir a tela de planos, iniciar e concluir uma compra. O evento do primeiro pet inclui a categoria cão ou gato. Eventos de compra podem incluir produto, valor e moeda. Os eventos definidos pelo Xodó excluem o nome e a foto do pet, os registros de cuidado e os dados de contato do tutor. No iOS, o SDK recebe a configuração de rastreamento conforme a escolha no sistema.</li>
         <li><strong>Assinaturas (RevenueCat + App Store / Google Play):</strong> para gerenciar a versão Pro, processamos o status da compra pela loja e pelo RevenueCat. <strong>Não temos acesso aos dados do seu cartão</strong>, o pagamento é feito inteiramente pela Apple/Google.</li>
         <li><strong>Relatórios de falha (Sentry):</strong> quando o app apresenta um erro, enviamos um relatório técnico para descobrirmos e corrigirmos o problema: modelo do aparelho, versão do sistema, versão do app e o ponto do código em que a falha aconteceu. <strong>Esse relatório não inclui os dados do seu pet, o seu cadastro nem o seu endereço de rede</strong>, e e-mails ou telefones que porventura apareçam no texto de um erro são mascarados antes do envio.</li>
       </ul>
+
+      <h3>2.5 Indicação de ONGs e suporte</h3>
+      <p>Se você indicar uma ONG, enviamos ao Firestore o nome, a cidade, o contato e a observação que você informar, além do seu e-mail cadastrado, quando disponível, da plataforma, da versão e da data de envio. Usamos a indicação para avaliar e contatar a entidade. Se estiver offline, a indicação pode ficar no aparelho até o envio. Se você nos escrever, usamos o endereço e o conteúdo da mensagem para responder e acompanhar o pedido.</p>
 
       <h2>3. Com quem compartilhamos</h2>
       <p>Só compartilhamos dados com serviços necessários para funções específicas:</p>
       <div class="tbl-wrap">
         <table>
           <tr><th>Serviço</th><th>Para quê</th><th>O que recebe</th></tr>
-          <tr><td>Google Firebase (Firestore)</td><td>Armazenar o cadastro (operador de dados)</td><td>Nome, e-mail, celular e opt-in de comunicações</td></tr>
-          <tr><td>Google Places / OpenStreetMap</td><td>Mostrar locais no mapa</td><td>A localização do aparelho e o termo da busca</td></tr>
+          <tr><td>Google Firebase (Firestore)</td><td>Armazenar o cadastro e receber indicações de ONGs</td><td>Nome, e-mail, celular, opção de comunicações e dados da indicação quando você a envia</td></tr>
+          <tr><td>Supabase</td><td>Autenticação, carteira, Família Xodó e lembretes</td><td>E-mail e identificadores de conta, registros familiares e foto principal compartilhada com autorização, dados da carteira, token de push e resumo de lembretes</td></tr>
+          <tr><td>Resend</td><td>Entregar o código de acesso ou confirmação</td><td>E-mail de destino e mensagem com código temporário</td></tr>
+          <tr><td>Expo, Apple APNs e Google FCM</td><td>Entregar notificações autorizadas</td><td>Token do aparelho, texto do aviso e identificadores necessários à abertura no app</td></tr>
+          <tr><td>Google Places / OpenStreetMap</td><td>Buscar locais no mapa</td><td>Coordenada aproximada ou do aparelho e categoria da busca</td></tr>
+          <tr><td>ipwho.is, GeoJS e ipapi.co</td><td>Estimar a região quando a localização do aparelho está indisponível</td><td>Endereço IP quando o respectivo serviço é consultado</td></tr>
           <tr><td>Google AdMob <em>(se houver anúncios)</em></td><td>Exibir e medir anúncios</td><td>Identificador de publicidade e dados do dispositivo</td></tr>
           <tr><td>Meta (Facebook/Instagram) <em>(medição de anúncios)</em></td><td>Saber qual anúncio trouxe a instalação do app</td><td>Identificador de publicidade (com sua autorização, no iOS), dados do dispositivo e os marcos de uso citados no item 2.4</td></tr>
-          <tr><td>RevenueCat + Apple/Google <em>(se houver assinatura)</em></td><td>Processar e validar a assinatura Pro</td><td>Identificador da compra e do dispositivo</td></tr>
+          <tr><td>RevenueCat + Apple/Google <em>(se houver compra)</em></td><td>Processar e validar Pro e Patinhas</td><td>Identificadores de cliente e compra, produto e estado da transação</td></tr>
           <tr><td>Sentry <em>(quando o app falha)</em></td><td>Detectar e corrigir erros do app</td><td>Modelo do aparelho, versão do sistema e do app, e o ponto do código onde ocorreu a falha</td></tr>
         </table>
       </div>
       <p class="tbl-hint">↔ Deslize a tabela para o lado para ver tudo.</p>
-      <p>Cada serviço tem sua própria política de privacidade. <strong>Não compartilhamos os dados do seu pet, de saúde ou de conta</strong> com nenhum deles.</p>
+      <p>Os dados são enviados conforme a função utilizada. Os prestadores que atuam em nome do Xodó devem tratar os dados para as finalidades informadas com proteção compatível com esta política e com a legislação. As lojas e outros serviços que atuam de forma independente também aplicam suas próprias políticas. O compartilhamento familiar fica limitado aos tutores autorizados.</p>
 
       <h3>3.1 Transferências internacionais</h3>
-      <p>O Xodó é operado a partir do <strong>Brasil</strong>. O cadastro fica no Google Firebase em servidor <strong>no Brasil (São Paulo)</strong>. Já os serviços de anúncios (Google AdMob), de medição de anúncios (Meta), de assinatura (RevenueCat, Apple, Google), de mapa (Google Places) e de relatório de falhas (Sentry) são operados globalmente e podem tratar dados <strong>fora do seu país</strong>, inclusive nos Estados Unidos.</p>
-      <p style="margin-top:8px;">Se você está no Espaço Econômico Europeu ou no Reino Unido, essas transferências acontecem com base nos mecanismos previstos no GDPR, em especial as <strong>Cláusulas Contratuais Padrão</strong> adotadas por esses fornecedores nos contratos de tratamento de dados. Os detalhes estão nas políticas de privacidade de cada um deles, listados na tabela acima.</p>
+      <p>O Xodó é operado a partir do <strong>Brasil</strong>. O cadastro de contato no Firebase usa servidor em São Paulo. Prestadores de autenticação, entrega de e-mail e notificações, mapas, anúncios, compras e diagnóstico podem tratar os dados da tabela fora do Brasil, inclusive nos Estados Unidos. A finalidade e a duração variam conforme a função e os prazos de retenção descritos nesta política. Para solicitar os países de destino e as garantias aplicáveis a uma operação, use o contato de privacidade acima.</p>
 
       <h2>4. Base legal e finalidade (LGPD e GDPR)</h2>
       <p>A finalidade é sempre oferecer e manter os recursos do Xodó. As bases legais, por tipo de tratamento:</p>
       <div class="tbl-wrap">
         <table>
           <tr><th>Tratamento</th><th>Base legal (LGPD)</th><th>Base legal (GDPR)</th></tr>
-          <tr><td>Fazer o app funcionar (dados do pet, no aparelho)</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+          <tr><td>Conta, registros, carteira e compartilhamento familiar solicitado</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
           <tr><td>Cadastro do tutor (nome, e-mail, celular)</td><td>Execução de contrato e legítimo interesse</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
           <tr><td>Envio de dicas e novidades (opt-in)</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
-          <tr><td>Localização para o mapa</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
+          <tr><td>Localização do aparelho e lembretes remotos quando ativados</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
+          <tr><td>Busca aproximada pelo IP ao abrir o mapa</td><td>Execução do serviço solicitado</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
           <tr><td>Anúncios personalizados</td><td>Consentimento</td><td>Consentimento, Art. 6(1)(a)</td></tr>
           <tr><td>Anúncios não personalizados e manutenção do app</td><td>Legítimo interesse</td><td>Legítimo interesse, Art. 6(1)(f)</td></tr>
-          <tr><td>Processar a assinatura Pro</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+          <tr><td>Validar compras de Pro e Patinhas</td><td>Execução de contrato</td><td>Execução de contrato, Art. 6(1)(b)</td></tr>
+          <tr><td>Prevenir crédito duplicado e atender pedidos de exclusão</td><td>Legítimo interesse ou cumprimento de obrigação legal, conforme a finalidade</td><td>Art. 6(1)(f) ou Art. 6(1)(c), quando aplicável</td></tr>
         </table>
       </div>
       <p class="tbl-hint">↔ Deslize a tabela para o lado para ver tudo.</p>
@@ -162,15 +182,19 @@
 
       <h2>5. Anúncios e crianças</h2>
       <ul>
-        <li>O Xodó é destinado a <strong>maiores de 13 anos</strong> (tutores responsáveis pelo pet). Não coletamos intencionalmente dados de crianças.</li>
+        <li>O Xodó é destinado a <strong>tutores a partir de 13 anos</strong>, observadas as regras aplicáveis e a classificação em cada loja. Menores de 18 anos devem usar o serviço com acompanhamento de responsável legal. Se você acredita que uma criança nos forneceu dados, escreva ao contato de privacidade para avaliarmos a remoção.</li>
         <li>No <strong>Espaço Econômico Europeu</strong>, o GDPR fixa a idade mínima para consentir com serviços digitais entre 13 e 16 anos, conforme o país. Se você está abaixo dessa idade no seu país, use o app apenas com autorização de quem é responsável por você.</li>
         <li>Anúncios, quando exibidos, seguem as políticas de conteúdo adequado da Apple e do Google.</li>
       </ul>
 
       <h2>6. Segurança</h2>
-      <p>Os dados do pet ficam no seu aparelho, protegidos pelos mecanismos do sistema operacional. O cadastro fica no Google Firebase, com transmissão criptografada (HTTPS) e acesso restrito ao controlador. Ainda assim, nenhum método é 100% seguro; recomendamos manter o aparelho protegido por senha/biometria.</p>
+      <p>Os dados locais são protegidos pelos mecanismos do sistema operacional. As comunicações com os serviços usam conexão criptografada. Conta e registros familiares exigem autenticação e regras de acesso por titular e papel autorizado. Ainda assim, nenhum método é 100% seguro; recomendamos manter o aparelho protegido por senha/biometria.</p>
 
       <h2>7. Retenção e exclusão</h2>
+      <p>Na versão 1.2.0, use <strong>Sua conta → Excluir minha conta</strong> e confirme com o código enviado ao e-mail cadastrado. São removidos conta, carteira e dados dos pets do titular na nuvem. Também removemos do servidor as fotos dos pets do titular e as imagens enviadas por essa conta, inclusive versões anteriores. O aparelho que confirma a ação limpa registros, fotos internas e lembretes. Dados de outros titulares permanecem com eles, sem o vínculo de autoria com a conta excluída. Arquivos exportados e cópias em outros aparelhos não podem ser apagados à distância.</p>
+      <p>Para impedir novo crédito de compra já utilizada, conservamos por <strong>12 meses após a exclusão</strong> um marcador criptográfico da transação, produto e datas necessários ao prazo. Não contém nome, e-mail, pet ou recibo; é pseudonimizado, sem garantia de anonimato. Eventos financeiros ainda em conferência podem permanecer até sua conclusão. O histórico mínimo de entregas dos lembretes é apagado após aproximadamente 30 dias; o perfil guarda o último uso e o resumo atual até a exclusão ou substituição.</p>
+      <p>A exclusão abre uma fila restrita para remover cadastros de contato e identificadores nos parceiros, incluindo Firebase e RevenueCat, em até 15 dias. O e-mail e os identificadores usados nessa fila são apagados ao concluir o atendimento. Um comprovante aleatório, sem identificador de conta, nome ou e-mail, permite retomar a limpeza local após falha e expira em até 12 meses. <strong>Excluir a conta não cancela assinaturas das lojas.</strong> Consulte <a href="excluir-dados.html">os passos completos</a>.</p>
+      <p>Para versões anteriores e dados exclusivamente locais:</p>
       <ul>
         <li>Os dados do pet permanecem no aparelho <strong>enquanto o app estiver instalado</strong>. Para apagá-los, desinstale o app, limpe os dados nas configurações do sistema ou use <strong>Ajustes → "Apagar todos os dados"</strong> dentro do app.</li>
         <li>O <strong>cadastro</strong> (nome, e-mail, celular) permanece em nosso banco até você pedir a exclusão. Para excluí-lo, envie um e-mail para <a href="mailto:xodoapp@rafasbatista.app.br">xodoapp@rafasbatista.app.br</a> a partir do e-mail cadastrado, com o assunto "Excluir cadastro"; atendemos em até 15 dias e removemos nome, e-mail, celular e preferências, sem retenção adicional.</li>
@@ -180,8 +204,8 @@
       <p>Você tem direito a <strong>acessar</strong>, <strong>corrigir</strong>, <strong>portar</strong> e <strong>excluir</strong> seus dados, além de <strong>restringir</strong> ou <strong>se opor</strong> a determinados tratamentos e <strong>revogar consentimentos</strong> já dados.</p>
       <p style="margin-top:8px;">Na prática, no Xodó:</p>
       <ul>
-        <li><strong>Dados do pet:</strong> você gerencia direto no app, editando ou apagando registros, e apaga tudo em <strong>Ajustes → Apagar todos os dados</strong>. Como ficam só no seu aparelho, nós não temos acesso a eles.</li>
-        <li><strong>Cadastro:</strong> corrija em <strong>Sua conta</strong> dentro do app; para excluir, escreva para o e-mail de contato (seção 7).</li>
+        <li><strong>Dados do pet:</strong> você gerencia os registros no app. Na Família Xodó, respeitamos as permissões do titular. Para a exclusão da conta e dos dados na nuvem, siga a seção 7.</li>
+        <li><strong>Cadastro e conta:</strong> corrija em <strong>Sua conta</strong>; na 1.2.0, use <strong>Excluir minha conta</strong>. Você também pode escrever ao contato indicado nesta política.</li>
         <li><strong>Dicas e novidades:</strong> desmarque "Quero receber dicas de cuidado e novidades por e-mail" em <strong>Sua conta</strong>, ou peça pelo e-mail de contato.</li>
         <li><strong>Anúncios:</strong> revise seu consentimento em <strong>Ajustes → Privacidade dos anúncios</strong> (onde aplicável) e a autorização de rastreamento nas configurações do sistema.</li>
         <li><strong>Localização:</strong> revogue a permissão nas configurações do sistema.</li>
